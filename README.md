@@ -42,10 +42,11 @@ org's public repos (starting with this one) have a real home instead of an empty
 
 ## 🔗 Explore
 
+- [🏠 Org root page →](https://theholyearthfoundation.github.io)
+
 - [🦉 I Am One Self.com →](https://www.iamoneself.com)
 - [🦋 I Am One Self Retreats — public preview →](https://drasticstatic.github.io/iamoneself-public-preview/)
 - [🎨 David Amaringo — public preview →](https://drasticstatic.github.io/david-amaringo-public-preview/)
-- [🏠 Org root page →](https://theholyearthfoundation.github.io)
 
 ## 🤝 Community health
 
