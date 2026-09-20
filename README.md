@@ -8,7 +8,7 @@
 
 *Founded by Isaiah Kenneth Zimbleman ("Kenney")*
 
-[![Home](https://img.shields.io/badge/🌐_Home-iamoneself.com-8A5A2B?style=flat)](https://www.iamoneself.com)
+[![Home](https://img.shields.io/badge/🌐_Home-iamoneself.com-purple?style=flat)](https://www.iamoneself.com)
 [![Retreats](https://img.shields.io/badge/🌐_Retreat%20Portal-retreats.iamoneself.com-8A5A2B?style=flat)](https://www.iamoneself.com)
 [![GitHub Portal](https://img.shields.io/badge/GitHub-theholyearthfoundation.github.io-181717?style=flat&logo=github&logoColor=white)](https://theholyearthfoundation.github.io)
 &nbsp;
