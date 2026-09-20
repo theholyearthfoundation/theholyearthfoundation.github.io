@@ -25,8 +25,8 @@
 traditions** (The Condor) in a teaching called **Plants & Miracles** — where the two come together as
 one, symbolized by the Barn Owl's single-mindedness. Currently expressed through two projects:
 
-- 🦉 **[I Am One Self](https://www.iamoneself.com/about-the-speaker)** — Kenney's teaching, background,
-  and the Plants & Miracles philosophy.
+- 🦉 **[I Am One Self](https://www.iamoneself.com)** — Kenney's teaching, background, and the
+  Plants & Miracles philosophy.
 - 🦋 **[I Am One Self Retreats](https://retreats.iamoneself.com)** — retreats and spiritual coaching,
   teaching Plants & Miracles through an interactive site.
 - 🎨 **[David Amaringo](https://drasticstatic.github.io/david-amaringo-public-preview/)** — a home for
