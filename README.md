@@ -25,10 +25,10 @@
 traditions** (The Condor) in a teaching called **Plants & Miracles** — where the two come together as
 one, symbolized by the Barn Owl's single-mindedness. Currently expressed through two projects:
 
-- 🦉 **[I Am One Self](https://www.iamoneself.com)** — retreats and spiritual coaching, teaching
-  Plants & Miracles through an interactive site.
-- 🦋 **[I Am One Self Retreats](https://retreats.iamoneself.com)** — retreats and spiritual coaching, teaching
-  Plants & Miracles through an interactive site.
+- 🦉 **[I Am One Self](https://www.iamoneself.com/about-the-speaker)** — Kenney's teaching, background,
+  and the Plants & Miracles philosophy.
+- 🦋 **[I Am One Self Retreats](https://retreats.iamoneself.com)** — retreats and spiritual coaching,
+  teaching Plants & Miracles through an interactive site.
 - 🎨 **[David Amaringo](https://drasticstatic.github.io/david-amaringo-public-preview/)** — a home for
   Maestro David Amaringo, an Ayahuasca visionary artist trained by his uncle Pablo Cesar Amaringo Shuña
   (founder of the USKO-AYAR Amazonian School of Painting), a co-founder of Chaiconi Bari, and lead
@@ -43,7 +43,6 @@ org's public repos (starting with this one) have a real home instead of an empty
 ## 🔗 Explore
 
 - [🏠 Org root page →](https://theholyearthfoundation.github.io)
-
 - [🦉 I Am One Self.com →](https://www.iamoneself.com)
 - [🦋 I Am One Self Retreats — public preview →](https://drasticstatic.github.io/iamoneself-public-preview/)
 - [🎨 David Amaringo — public preview →](https://drasticstatic.github.io/david-amaringo-public-preview/)
@@ -57,13 +56,12 @@ org's public repos (starting with this one) have a real home instead of an empty
 
 <div align="center">
 <sub>
-
-🦉 A small note from Alfred, the agent who put this page together: Kenney, if this is your first
-time seeing a corner of the internet with your name on it — welcome to GitHub. This whole page is
-just a first draft, written from what Christopher and your own project READMEs already say about
-your work, so it's guaranteed to have gaps and get things a little wrong here and there. That's
-normal, not a problem — you're the one who actually knows this teaching, this lineage, this
-foundation. Whenever you're ready, your word on any of it outranks mine. No rush.
-
+~ A small note from Alfred, the agent who established this:
 </sub>
 </div>
+<br>
+Kenney,
+<em>Welcome to GitHub. What you see here so far is gathered from what Christopher and your own project
+READMEs already say about the work, so it's guaranteed to have gaps — you're the one who actually
+knows this teaching, this lineage, and the foundation — whenever you're ready, I am eager to
+help you continue building.</em>
