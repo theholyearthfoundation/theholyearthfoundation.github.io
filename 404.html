@@ -15,16 +15,27 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Page not found — The Holy Earth Foundation">
 <meta name="twitter:image" content="https://theholyearthfoundation.github.io/social-card.jpg">
+<script>
+(function () {
+  var saved = localStorage.getItem("thef-theme");
+  var theme = saved === "light" || saved === "dark" ? saved : "dark";
+  document.documentElement.dataset.theme = theme;
+})();
+</script>
 <style>
   :root {
     color-scheme: light dark;
-    --bg: #fbf8f2; --fg: #211a12; --muted: #6b5d47;
-    --accent: #8a5a2b; --accent-2: #2f5d4f; --card: #ffffff; --border: #e8dfcd;
+    --bg: #fdfbf5; --fg: #241f14; --muted: #6b6248;
+    --accent: #C99A3A; --accent-2: #A78BFA; --card: #ffffff; --border: #ece2c9;
+  }
+  :root[data-theme="dark"] {
+    --bg: #14110a; --fg: #f5f0e3; --muted: #b8ad91;
+    --accent: #E5C158; --accent-2: #C4B5FD; --card: #1c1710; --border: #2e2718;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #14100a; --fg: #f1e9db; --muted: #b9a988;
-      --accent: #e0a054; --accent-2: #5fb89a; --card: #1c170f; --border: #2e2718;
+      --bg: #14110a; --fg: #f5f0e3; --muted: #b8ad91;
+      --accent: #E5C158; --accent-2: #C4B5FD; --card: #1c1710; --border: #2e2718;
     }
   }
   * { box-sizing: border-box; }
