@@ -43,6 +43,10 @@ org's public repos (starting with this one) have a real home instead of an empty
 ## 🔗 Explore
 
 - [🏠 Org root page →](https://theholyearthfoundation.github.io)
+- [🕰️ Changelog →](https://theholyearthfoundation.github.io/changelog-astro-public/changelog) —
+  a running, plain-language record of what's actually shipped.
+- [📚 Library →](https://theholyearthfoundation.github.io/changelog-astro-public/library) — deeper
+  technical write-ups behind it.
 - [🦉 I Am One Self.com →](https://www.iamoneself.com)
 - [🦋 I Am One Self Retreats — public preview →](https://drasticstatic.github.io/iamoneself-public-preview/)
 - [🎨 David Amaringo — public preview →](https://drasticstatic.github.io/david-amaringo-public-preview/)
