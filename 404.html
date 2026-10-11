@@ -4,9 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page not found — The Holy Earth Foundation</title>
+<meta name="theme-color" content="#0f2420">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="/favicon.png">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="/thef.css">
 <meta property="og:title" content="Page not found — The Holy Earth Foundation">
 <meta property="og:description" content="Not every path leads where you expect -- this one doesn't exist, but you're welcome to sit with that for a moment.">
 <meta property="og:image" content="https://theholyearthfoundation.github.io/social-card.jpg">
@@ -17,90 +19,38 @@
 <meta name="twitter:image" content="https://theholyearthfoundation.github.io/social-card.jpg">
 <script>
 (function () {
-  var saved = localStorage.getItem("thef-theme");
-  var theme = saved === "light" || saved === "dark" ? saved : "dark";
-  document.documentElement.dataset.theme = theme;
+  var saved = null;
+  try { saved = localStorage.getItem("thef-theme"); } catch (e) {}
+  document.documentElement.dataset.theme = saved === "light" || saved === "dark" ? saved : "dark";
 })();
 </script>
 <style>
-  :root {
-    color-scheme: light dark;
-    --bg: #fdfbf5; --fg: #241f14; --muted: #6b6248;
-    --accent: #C99A3A; --accent-2: #A78BFA; --card: #ffffff; --border: #ece2c9;
-  }
-  :root[data-theme="dark"] {
-    --bg: #14110a; --fg: #f5f0e3; --muted: #b8ad91;
-    --accent: #E5C158; --accent-2: #C4B5FD; --card: #1c1710; --border: #2e2718;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #14110a; --fg: #f5f0e3; --muted: #b8ad91;
-      --accent: #E5C158; --accent-2: #C4B5FD; --card: #1c1710; --border: #2e2718;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    color: var(--fg);
-    background: radial-gradient(circle at 80% 0%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 45%), var(--bg);
-    min-height: 100vh;
-  }
-  .wrap { max-width: 560px; margin: 0 auto; padding: 4.5rem 1.5rem 3rem; text-align: center; }
-  body { padding-bottom: 96px; }
-  .glyph { font-size: 3rem; margin-bottom: 0.5rem; }
-  h1 { font-size: 1.6rem; margin: 0 0 0.5rem; }
-  p.lede { color: var(--muted); line-height: 1.6; margin: 0 0 2rem; }
-  .reflection {
-    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
-    padding: 1.5rem; margin-bottom: 2rem; text-align: left;
-  }
-  .reflection h2 { margin: 0 0 0.6rem; font-size: 0.95rem; color: var(--accent); }
-  .reflection p { margin: 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; font-style: italic; }
+  .lost { max-width: 620px; margin: 0 auto; padding: 3rem 1.25rem 2rem; text-align: center; }
+  .lost-vine { width: 200px; height: 320px; margin: 0 auto 1.4rem; }
+  .lost h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); margin: 0 0 0.8rem; }
+  .lede { color: var(--moss); font-size: 1.1rem; margin: 0 auto 2rem; max-width: 30rem; }
+  .reflection { text-align: left; padding: 1.4rem 1.6rem; margin: 0 0 2rem; }
+  .reflection h2 { font-size: 1.35rem; margin: 0 0 0.5rem; color: var(--gold); }
+  .reflection p { margin: 0; font-style: italic; font-size: 1.05rem; line-height: 1.65; }
   .links { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
-  a.btn {
-    display: inline-block; padding: 0.6rem 1.1rem; border-radius: 10px; text-decoration: none;
-    font-weight: 600; font-size: 0.9rem; border: 1px solid var(--border); color: var(--fg); background: var(--card);
-  }
-  a.btn.primary { background: var(--accent); color: #241000; border-color: transparent; }
-  .universal-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 40;
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    background: color-mix(in srgb, var(--bg) 88%, transparent);
-    border-top: 1px solid var(--border);
-    padding: 10px 1.5rem;
-    color: var(--muted);
-    font-size: 0.78rem;
-  }
-  .universal-footer .footer-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 4px 18px;
-    text-align: center;
-  }
-  .universal-footer a { color: var(--muted); display: inline-flex; align-items: center; gap: 0.3rem; text-decoration: none; }
-  .universal-footer a:hover { color: var(--accent); }
-  .universal-footer .footer-brand { font-weight: 600; color: var(--fg); }
-  #starfield-canvas { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
 </style>
 </head>
 <body>
   <canvas id="starfield-canvas" aria-hidden="true"></canvas>
-  <div class="wrap">
-    <div class="glyph">🌎</div>
+  <main class="lost">
+    <div class="lost-vine"><svg class="vine" viewBox="0 0 200 320" aria-hidden="true" focusable="false">
+<defs><radialGradient id="vine-crown-glow"><stop offset="0" style="stop-color:var(--glow);stop-opacity:.95"/><stop offset=".45" style="stop-color:var(--glow);stop-opacity:.35"/><stop offset="1" style="stop-color:var(--glow);stop-opacity:0"/></radialGradient></defs>
+<path class="strand strand-sky" pathLength="1" d="M90.8 294L90.8 292.9L90.8 291.8L90.8 290.6L90.8 289.5L90.9 288.4L91 287.3L91.1 286.2L91.2 285.1L91.3 283.9L91.5 282.8L91.7 281.7L92 280.6L92.2 279.5L92.5 278.4L92.8 277.3L93.1 276.1L93.5 275L93.8 273.9L94.2 272.8L94.7 271.7L95.1 270.6L95.6 269.4L96.1 268.3L96.6 267.2L97.1 266.1L97.7 265L98.2 263.9L98.8 262.7L99.4 261.6L100 260.5L100.6 259.4L101.2 258.3L101.9 257.1L102.5 256L103.2 254.9L103.8 253.8L104.5 252.7L105.1 251.6L105.8 250.4L106.4 249.3L107 248.2L107.7 247.1L108.3 246L108.9 244.9L109.5 243.8L110 242.6L110.6 241.5L111.1 240.4L111.6 239.3L112.1 238.2L112.6 237.1L113 235.9L113.4 234.8L113.8 233.7L114.1 232.6L114.4 231.5L114.7 230.3L114.9 229.2L115.1 228.1L115.3 227L115.4 225.9L115.4 224.8L115.5 223.6L115.5 222.5L115.4 221.4L115.3 220.3L115.1 219.2L114.9 218.1L114.7 216.9L114.4 215.8L114.1 214.7L113.7 213.6L113.2 212.5L112.8 211.4L112.2 210.3L111.7 209.1L111.1 208L110.4 206.9L109.7 205.8L109 204.7L108.2 203.6L107.4 202.4L106.6 201.3L105.7 200.2L104.9 199.1L103.9 198L103 196.9L102 195.7L101 194.6L100 193.5L99 192.4L97.9 191.3L96.9 190.1L95.8 189L94.8 187.9L93.7 186.8L92.6 185.7L91.6 184.6L90.5 183.4L89.5 182.3L88.5 181.2L87.5 180.1L86.5 179L85.5 177.9L84.6 176.8L83.7 175.6L82.8 174.5L82 173.4L81.2 172.3L80.5 171.2L79.8 170.1L79.1 168.9L78.5 167.8L78 166.7L77.5 165.6L77 164.5L76.6 163.3L76.3 162.2L76 161.1L75.9 160L75.7 158.9L75.7 157.8L75.7 156.7L75.7 155.5L75.9 154.4L76.1 153.3L76.4 152.2L76.7 151.1L77.2 150L77.7 148.8L78.2 147.7L78.9 146.6L79.6 145.5L80.3 144.4L81.2 143.3L82.1 142.1L83 141L84.1 139.9L85.1 138.8L86.3 137.7L87.5 136.5L88.7 135.4L90 134.3L91.3 133.2L92.7 132.1L94.1 131L95.5 129.8L97 128.7L98.5 127.6L100 126.5L101.5 125.4L103.1 124.3L104.6 123.2L106.2 122L107.8 120.9L109.3 119.8L110.9 118.7L112.4 117.6L114 116.5L115.5 115.3L116.9 114.2L118.4 113.1L119.8 112L121.2 110.9L122.5 109.8L123.8 108.6L125 107.5L126.2 106.4L127.3 105.3L128.3 104.2L129.3 103L130.2 101.9L131 100.8L131.8 99.7L132.5 98.6L133.1 97.5L133.6 96.3L134 95.2L134.3 94.1L134.5 93L134.7 91.9L134.7 90.8L134.6 89.7L134.5 88.5L134.2 87.4L133.9 86.3L133.4 85.2L132.9 84.1L132.2 83L131.5 81.8L130.7 80.7L129.7 79.6L128.7 78.5L127.6 77.4L126.4 76.3L125.1 75.1L123.7 74L122.3 72.9L120.7 71.8L119.1 70.7L117.4 69.5L115.7 68.4L113.9 67.3L112 66.2L110.1 65.1L108.2 64L106.2 62.8L104.2 61.7L102.1 60.6L100 59.5L97.9 58.4L95.8 57.3L93.6 56.2L91.5 55L89.4 53.9L87.2 52.8L85.1 51.7L83 50.6L81 49.5L79 48.3L77 47.2L75 46.1L73.2 45L71.3 43.9L69.6 42.8L67.9 41.6L66.2 40.5L64.7 39.4L63.2 38.3L61.9 37.2L60.6 36.1L59.4 34.9L58.4 33.8L57.4 32.7L56.5 31.6L55.8 30.5L55.2 29.3L54.6 28.2L54.3 27.1L54 26"/>
+<path class="strand-rib strand-sky-rib" pathLength="1" d="M90.8 294L90.8 292.9L90.8 291.8L90.8 290.6L90.8 289.5L90.9 288.4L91 287.3L91.1 286.2L91.2 285.1L91.3 283.9L91.5 282.8L91.7 281.7L92 280.6L92.2 279.5L92.5 278.4L92.8 277.3L93.1 276.1L93.5 275L93.8 273.9L94.2 272.8L94.7 271.7L95.1 270.6L95.6 269.4L96.1 268.3L96.6 267.2L97.1 266.1L97.7 265L98.2 263.9L98.8 262.7L99.4 261.6L100 260.5L100.6 259.4L101.2 258.3L101.9 257.1L102.5 256L103.2 254.9L103.8 253.8L104.5 252.7L105.1 251.6L105.8 250.4L106.4 249.3L107 248.2L107.7 247.1L108.3 246L108.9 244.9L109.5 243.8L110 242.6L110.6 241.5L111.1 240.4L111.6 239.3L112.1 238.2L112.6 237.1L113 235.9L113.4 234.8L113.8 233.7L114.1 232.6L114.4 231.5L114.7 230.3L114.9 229.2L115.1 228.1L115.3 227L115.4 225.9L115.4 224.8L115.5 223.6L115.5 222.5L115.4 221.4L115.3 220.3L115.1 219.2L114.9 218.1L114.7 216.9L114.4 215.8L114.1 214.7L113.7 213.6L113.2 212.5L112.8 211.4L112.2 210.3L111.7 209.1L111.1 208L110.4 206.9L109.7 205.8L109 204.7L108.2 203.6L107.4 202.4L106.6 201.3L105.7 200.2L104.9 199.1L103.9 198L103 196.9L102 195.7L101 194.6L100 193.5L99 192.4L97.9 191.3L96.9 190.1L95.8 189L94.8 187.9L93.7 186.8L92.6 185.7L91.6 184.6L90.5 183.4L89.5 182.3L88.5 181.2L87.5 180.1L86.5 179L85.5 177.9L84.6 176.8L83.7 175.6L82.8 174.5L82 173.4L81.2 172.3L80.5 171.2L79.8 170.1L79.1 168.9L78.5 167.8L78 166.7L77.5 165.6L77 164.5L76.6 163.3L76.3 162.2L76 161.1L75.9 160L75.7 158.9L75.7 157.8L75.7 156.7L75.7 155.5L75.9 154.4L76.1 153.3L76.4 152.2L76.7 151.1L77.2 150L77.7 148.8L78.2 147.7L78.9 146.6L79.6 145.5L80.3 144.4L81.2 143.3L82.1 142.1L83 141L84.1 139.9L85.1 138.8L86.3 137.7L87.5 136.5L88.7 135.4L90 134.3L91.3 133.2L92.7 132.1L94.1 131L95.5 129.8L97 128.7L98.5 127.6L100 126.5L101.5 125.4L103.1 124.3L104.6 123.2L106.2 122L107.8 120.9L109.3 119.8L110.9 118.7L112.4 117.6L114 116.5L115.5 115.3L116.9 114.2L118.4 113.1L119.8 112L121.2 110.9L122.5 109.8L123.8 108.6L125 107.5L126.2 106.4L127.3 105.3L128.3 104.2L129.3 103L130.2 101.9L131 100.8L131.8 99.7L132.5 98.6L133.1 97.5L133.6 96.3L134 95.2L134.3 94.1L134.5 93L134.7 91.9L134.7 90.8L134.6 89.7L134.5 88.5L134.2 87.4L133.9 86.3L133.4 85.2L132.9 84.1L132.2 83L131.5 81.8L130.7 80.7L129.7 79.6L128.7 78.5L127.6 77.4L126.4 76.3L125.1 75.1L123.7 74L122.3 72.9L120.7 71.8L119.1 70.7L117.4 69.5L115.7 68.4L113.9 67.3L112 66.2L110.1 65.1L108.2 64L106.2 62.8L104.2 61.7L102.1 60.6L100 59.5L97.9 58.4L95.8 57.3L93.6 56.2L91.5 55L89.4 53.9L87.2 52.8L85.1 51.7L83 50.6L81 49.5L79 48.3L77 47.2L75 46.1L73.2 45L71.3 43.9L69.6 42.8L67.9 41.6L66.2 40.5L64.7 39.4L63.2 38.3L61.9 37.2L60.6 36.1L59.4 34.9L58.4 33.8L57.4 32.7L56.5 31.6L55.8 30.5L55.2 29.3L54.6 28.2L54.3 27.1L54 26"/>
+<path class="strand strand-gold" pathLength="1" d="M109.2 294L109.2 292.9L109.2 291.8L109.2 290.6L109.2 289.5L109.1 288.4L109 287.3L108.9 286.2L108.8 285.1L108.7 283.9L108.5 282.8L108.3 281.7L108 280.6L107.8 279.5L107.5 278.4L107.2 277.3L106.9 276.1L106.5 275L106.2 273.9L105.8 272.8L105.3 271.7L104.9 270.6L104.4 269.4L103.9 268.3L103.4 267.2L102.9 266.1L102.3 265L101.8 263.9L101.2 262.7L100.6 261.6L100 260.5L99.4 259.4L98.8 258.3L98.1 257.1L97.5 256L96.8 254.9L96.2 253.8L95.5 252.7L94.9 251.6L94.2 250.4L93.6 249.3L93 248.2L92.3 247.1L91.7 246L91.1 244.9L90.5 243.8L90 242.6L89.4 241.5L88.9 240.4L88.4 239.3L87.9 238.2L87.4 237.1L87 235.9L86.6 234.8L86.2 233.7L85.9 232.6L85.6 231.5L85.3 230.3L85.1 229.2L84.9 228.1L84.7 227L84.6 225.9L84.6 224.8L84.5 223.6L84.5 222.5L84.6 221.4L84.7 220.3L84.9 219.2L85.1 218.1L85.3 216.9L85.6 215.8L85.9 214.7L86.3 213.6L86.8 212.5L87.2 211.4L87.8 210.3L88.3 209.1L88.9 208L89.6 206.9L90.3 205.8L91 204.7L91.8 203.6L92.6 202.4L93.4 201.3L94.3 200.2L95.1 199.1L96.1 198L97 196.9L98 195.7L99 194.6L100 193.5L101 192.4L102.1 191.3L103.1 190.1L104.2 189L105.2 187.9L106.3 186.8L107.4 185.7L108.4 184.6L109.5 183.4L110.5 182.3L111.5 181.2L112.5 180.1L113.5 179L114.5 177.9L115.4 176.8L116.3 175.6L117.2 174.5L118 173.4L118.8 172.3L119.5 171.2L120.2 170.1L120.9 168.9L121.5 167.8L122 166.7L122.5 165.6L123 164.5L123.4 163.3L123.7 162.2L124 161.1L124.1 160L124.3 158.9L124.3 157.8L124.3 156.7L124.3 155.5L124.1 154.4L123.9 153.3L123.6 152.2L123.3 151.1L122.8 150L122.3 148.8L121.8 147.7L121.1 146.6L120.4 145.5L119.7 144.4L118.8 143.3L117.9 142.1L117 141L115.9 139.9L114.9 138.8L113.7 137.7L112.5 136.5L111.3 135.4L110 134.3L108.7 133.2L107.3 132.1L105.9 131L104.5 129.8L103 128.7L101.5 127.6L100 126.5L98.5 125.4L96.9 124.3L95.4 123.2L93.8 122L92.2 120.9L90.7 119.8L89.1 118.7L87.6 117.6L86 116.5L84.5 115.3L83.1 114.2L81.6 113.1L80.2 112L78.8 110.9L77.5 109.8L76.2 108.6L75 107.5L73.8 106.4L72.7 105.3L71.7 104.2L70.7 103L69.8 101.9L69 100.8L68.2 99.7L67.5 98.6L66.9 97.5L66.4 96.3L66 95.2L65.7 94.1L65.5 93L65.3 91.9L65.3 90.8L65.4 89.7L65.5 88.5L65.8 87.4L66.1 86.3L66.6 85.2L67.1 84.1L67.8 83L68.5 81.8L69.3 80.7L70.3 79.6L71.3 78.5L72.4 77.4L73.6 76.3L74.9 75.1L76.3 74L77.7 72.9L79.3 71.8L80.9 70.7L82.6 69.5L84.3 68.4L86.1 67.3L88 66.2L89.9 65.1L91.8 64L93.8 62.8L95.8 61.7L97.9 60.6L100 59.5L102.1 58.4L104.2 57.3L106.4 56.2L108.5 55L110.6 53.9L112.8 52.8L114.9 51.7L117 50.6L119 49.5L121 48.3L123 47.2L125 46.1L126.8 45L128.7 43.9L130.4 42.8L132.1 41.6L133.8 40.5L135.3 39.4L136.8 38.3L138.1 37.2L139.4 36.1L140.6 34.9L141.6 33.8L142.6 32.7L143.5 31.6L144.2 30.5L144.8 29.3L145.4 28.2L145.7 27.1L146 26"/>
+<path class="strand-rib strand-gold-rib" pathLength="1" d="M109.2 294L109.2 292.9L109.2 291.8L109.2 290.6L109.2 289.5L109.1 288.4L109 287.3L108.9 286.2L108.8 285.1L108.7 283.9L108.5 282.8L108.3 281.7L108 280.6L107.8 279.5L107.5 278.4L107.2 277.3L106.9 276.1L106.5 275L106.2 273.9L105.8 272.8L105.3 271.7L104.9 270.6L104.4 269.4L103.9 268.3L103.4 267.2L102.9 266.1L102.3 265L101.8 263.9L101.2 262.7L100.6 261.6L100 260.5L99.4 259.4L98.8 258.3L98.1 257.1L97.5 256L96.8 254.9L96.2 253.8L95.5 252.7L94.9 251.6L94.2 250.4L93.6 249.3L93 248.2L92.3 247.1L91.7 246L91.1 244.9L90.5 243.8L90 242.6L89.4 241.5L88.9 240.4L88.4 239.3L87.9 238.2L87.4 237.1L87 235.9L86.6 234.8L86.2 233.7L85.9 232.6L85.6 231.5L85.3 230.3L85.1 229.2L84.9 228.1L84.7 227L84.6 225.9L84.6 224.8L84.5 223.6L84.5 222.5L84.6 221.4L84.7 220.3L84.9 219.2L85.1 218.1L85.3 216.9L85.6 215.8L85.9 214.7L86.3 213.6L86.8 212.5L87.2 211.4L87.8 210.3L88.3 209.1L88.9 208L89.6 206.9L90.3 205.8L91 204.7L91.8 203.6L92.6 202.4L93.4 201.3L94.3 200.2L95.1 199.1L96.1 198L97 196.9L98 195.7L99 194.6L100 193.5L101 192.4L102.1 191.3L103.1 190.1L104.2 189L105.2 187.9L106.3 186.8L107.4 185.7L108.4 184.6L109.5 183.4L110.5 182.3L111.5 181.2L112.5 180.1L113.5 179L114.5 177.9L115.4 176.8L116.3 175.6L117.2 174.5L118 173.4L118.8 172.3L119.5 171.2L120.2 170.1L120.9 168.9L121.5 167.8L122 166.7L122.5 165.6L123 164.5L123.4 163.3L123.7 162.2L124 161.1L124.1 160L124.3 158.9L124.3 157.8L124.3 156.7L124.3 155.5L124.1 154.4L123.9 153.3L123.6 152.2L123.3 151.1L122.8 150L122.3 148.8L121.8 147.7L121.1 146.6L120.4 145.5L119.7 144.4L118.8 143.3L117.9 142.1L117 141L115.9 139.9L114.9 138.8L113.7 137.7L112.5 136.5L111.3 135.4L110 134.3L108.7 133.2L107.3 132.1L105.9 131L104.5 129.8L103 128.7L101.5 127.6L100 126.5L98.5 125.4L96.9 124.3L95.4 123.2L93.8 122L92.2 120.9L90.7 119.8L89.1 118.7L87.6 117.6L86 116.5L84.5 115.3L83.1 114.2L81.6 113.1L80.2 112L78.8 110.9L77.5 109.8L76.2 108.6L75 107.5L73.8 106.4L72.7 105.3L71.7 104.2L70.7 103L69.8 101.9L69 100.8L68.2 99.7L67.5 98.6L66.9 97.5L66.4 96.3L66 95.2L65.7 94.1L65.5 93L65.3 91.9L65.3 90.8L65.4 89.7L65.5 88.5L65.8 87.4L66.1 86.3L66.6 85.2L67.1 84.1L67.8 83L68.5 81.8L69.3 80.7L70.3 79.6L71.3 78.5L72.4 77.4L73.6 76.3L74.9 75.1L76.3 74L77.7 72.9L79.3 71.8L80.9 70.7L82.6 69.5L84.3 68.4L86.1 67.3L88 66.2L89.9 65.1L91.8 64L93.8 62.8L95.8 61.7L97.9 60.6L100 59.5L102.1 58.4L104.2 57.3L106.4 56.2L108.5 55L110.6 53.9L112.8 52.8L114.9 51.7L117 50.6L119 49.5L121 48.3L123 47.2L125 46.1L126.8 45L128.7 43.9L130.4 42.8L132.1 41.6L133.8 40.5L135.3 39.4L136.8 38.3L138.1 37.2L139.4 36.1L140.6 34.9L141.6 33.8L142.6 32.7L143.5 31.6L144.2 30.5L144.8 29.3L145.4 28.2L145.7 27.1L146 26"/>
+<g class="vine-leaf" style="--d:0.8s" transform="translate(84.7 227) rotate(-148) scale(1.5)"><path d="M0 0C5-6 13-7 21 0C13 7 5 6 0 0Z"/><path class="rib" d="M2.5 0L17 0"/></g><g class="vine-leaf" style="--d:0.9s" transform="translate(115.3 218) rotate(-24) scale(1.2)"><path d="M0 0C5-6 13-7 21 0C13 7 5 6 0 0Z"/><path class="rib" d="M2.5 0L17 0"/></g><g class="vine-leaf" style="--d:1.4s" transform="translate(124.1 160) rotate(-32) scale(1.3)"><path d="M0 0C5-6 13-7 21 0C13 7 5 6 0 0Z"/><path class="rib" d="M2.5 0L17 0"/></g><g class="vine-leaf" style="--d:1.5s" transform="translate(75.9 151) rotate(-156) scale(1)"><path d="M0 0C5-6 13-7 21 0C13 7 5 6 0 0Z"/><path class="rib" d="M2.5 0L17 0"/></g><g class="vine-leaf" style="--d:2s" transform="translate(65.5 93) rotate(-148) scale(1)"><path d="M0 0C5-6 13-7 21 0C13 7 5 6 0 0Z"/><path class="rib" d="M2.5 0L17 0"/></g><g class="vine-leaf" style="--d:2.1s" transform="translate(134.5 84) rotate(-24) scale(0.8)"><path d="M0 0C5-6 13-7 21 0C13 7 5 6 0 0Z"/><path class="rib" d="M2.5 0L17 0"/></g>
+
+</svg></div>
     <h1>Not every path leads where you expect.</h1>
     <p class="lede">This particular one doesn't exist — but you're welcome to sit with that for a moment before you turn back.</p>
 
-    <div class="reflection">
+    <div class="reflection panel">
       <h2>A line to carry with you</h2>
       <p>"I am one Self, united with my Creator, at one with every aspect of creation, and limitless in power and in peace." — ACIM Lesson 95</p>
     </div>
@@ -109,104 +59,21 @@
       <a class="btn primary" href="/">🌎 Back to the org page</a>
       <a class="btn" href="https://retreats.iamoneself.com">🦋 retreats.iamoneself.com</a>
       <a class="btn" href="https://www.iamoneself.com">🌐 iamoneself.com</a>
-      <a class="btn" href="https://theholyearthfoundation.github.io/changelog-astro-public/"><i class="ph ph-door-open"></i> Astro Porch</a>
-      <a class="btn" href="https://github.com/theholyearthfoundation">
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" style="vertical-align:-2px; margin-right:0.3em;" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Source repo
-      </a>
+      <a class="btn" href="https://theholyearthfoundation.github.io/changelog-astro-public/"><i class="ph ph-door-open" aria-hidden="true"></i> Astro Porch</a>
+      <a class="btn" href="https://github.com/theholyearthfoundation"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg> Source repo</a>
     </div>
-  </div>
+  </main>
 
   <footer class="universal-footer">
     <div class="footer-inner">
       <span class="footer-brand">The Holy Earth Foundation</span>
-      <a href="https://theholyearthfoundation.github.io/changelog-astro-public/"><i class="ph ph-door-open"></i> Astro Porch</a>
-      <a href="https://theholyearthfoundation.github.io/changelog-astro-public/changelog"><i class="ph ph-clock-counter-clockwise"></i> Changelog</a>
-      <a href="https://theholyearthfoundation.github.io/changelog-astro-public/library"><i class="ph ph-books"></i> Library</a>
-      <a href="https://www.iamoneself.com/about-the-speaker"><i class="ph ph-chat-circle-text"></i> Reach out</a>
+      <a href="https://theholyearthfoundation.github.io/changelog-astro-public/"><i class="ph ph-door-open" aria-hidden="true"></i> Astro Porch</a>
+      <a href="https://theholyearthfoundation.github.io/changelog-astro-public/changelog"><i class="ph ph-clock-counter-clockwise" aria-hidden="true"></i> Changelog</a>
+      <a href="https://theholyearthfoundation.github.io/changelog-astro-public/library"><i class="ph ph-books" aria-hidden="true"></i> Library</a>
+      <a href="https://www.iamoneself.com/about-the-speaker"><i class="ph ph-chat-circle-text" aria-hidden="true"></i> Reach out</a>
+      <a href="http://www.itcfonts.com" target="_blank" rel="noopener" class="font-credit">Headings set in PapyrusStd, Chris Costello / ITC</a>
     </div>
   </footer>
-  <script>
-  (function () {
-    var canvas = document.getElementById("starfield-canvas");
-    if (!canvas) return;
-    var ctx = canvas.getContext("2d");
-    var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var starColor = "#BAE6FD", sparkColor = "#E5C158";
-    var stars = [], sparks = [];
-    var mouse = { x: -9999, y: -9999 };
-    var lastMouse = { x: -9999, y: -9999 };
-    var W, H;
-
-    function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
-    function initStars() {
-      stars = [];
-      var count = Math.min(140, Math.floor((W * H) / 9000));
-      for (var i = 0; i < count; i++) {
-        stars.push({ bx: Math.random() * W, by: Math.random() * H, x: 0, y: 0,
-          r: Math.random() * 1.4 + 0.4, bright: Math.random() < 0.22,
-          phase: Math.random() * Math.PI * 2, speed: 0.4 + Math.random() * 0.6 });
-      }
-    }
-    function onResize() { resize(); initStars(); }
-    window.addEventListener("resize", onResize);
-    resize(); initStars();
-
-    var MAGNET_RADIUS = 90;
-    function drawSpike(x, y, r) {
-      ctx.save(); ctx.translate(x, y); ctx.strokeStyle = starColor;
-      ctx.globalAlpha = 0.55; ctx.lineWidth = 0.6;
-      ctx.beginPath(); ctx.moveTo(-r * 2.6, 0); ctx.lineTo(r * 2.6, 0);
-      ctx.moveTo(0, -r * 2.6); ctx.lineTo(0, r * 2.6); ctx.stroke(); ctx.restore();
-    }
-    function updateStars(t) {
-      for (var i = 0; i < stars.length; i++) {
-        var s = stars[i];
-        var dx = s.bx - mouse.x, dy = s.by - mouse.y;
-        var dist = Math.sqrt(dx * dx + dy * dy);
-        var tx = s.bx, ty = s.by;
-        if (dist < MAGNET_RADIUS) {
-          var f = 1 - dist / MAGNET_RADIUS, push = f * f * 26;
-          var ang = Math.atan2(dy, dx);
-          tx = s.bx + Math.cos(ang) * push; ty = s.by + Math.sin(ang) * push;
-        }
-        s.x += (tx - s.x) * 0.18; s.y += (ty - s.y) * 0.18;
-        var twinkle = 0.5 + 0.5 * Math.sin(t * 0.001 * s.speed + s.phase);
-        var alpha = s.bright ? 0.55 + twinkle * 0.45 : 0.22 + twinkle * 0.3;
-        ctx.beginPath(); ctx.fillStyle = starColor; ctx.globalAlpha = alpha;
-        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2); ctx.fill();
-        if (s.bright) drawSpike(s.x, s.y, s.r);
-      }
-      ctx.globalAlpha = 1;
-    }
-    function spawnSparks(x, y) {
-      var dx = x - lastMouse.x, dy = y - lastMouse.y;
-      if (lastMouse.x < -9000) { lastMouse.x = x; lastMouse.y = y; return; }
-      for (var i = 0; i < 2; i++) {
-        if (sparks.length > 80) sparks.shift();
-        var jitter = (Math.random() - 0.5) * 0.6;
-        sparks.push({ x: x, y: y, vx: dx * 0.12 + jitter, vy: dy * 0.12 + jitter, life: 1, size: 1 + Math.random() * 1.6 });
-      }
-      lastMouse.x = x; lastMouse.y = y;
-    }
-    function updateSparks() {
-      for (var i = sparks.length - 1; i >= 0; i--) {
-        var p = sparks[i];
-        p.x += p.vx; p.y += p.vy; p.vx *= 0.92; p.vy *= 0.92; p.vy += 0.01; p.life -= 0.022;
-        if (p.life <= 0) { sparks.splice(i, 1); continue; }
-        ctx.beginPath(); ctx.fillStyle = sparkColor; ctx.globalAlpha = Math.max(p.life, 0);
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2); ctx.fill();
-      }
-      ctx.globalAlpha = 1;
-    }
-    window.addEventListener("mousemove", function (e) { mouse.x = e.clientX; mouse.y = e.clientY; spawnSparks(e.clientX, e.clientY); });
-    window.addEventListener("mouseleave", function () { mouse.x = -9999; mouse.y = -9999; });
-    function loop(t) {
-      ctx.clearRect(0, 0, W, H);
-      if (!reduced) { updateStars(t || 0); updateSparks(); }
-      requestAnimationFrame(loop);
-    }
-    requestAnimationFrame(loop);
-  })();
-  </script>
+  <script src="/starfield.js"></script>
 </body>
 </html>
