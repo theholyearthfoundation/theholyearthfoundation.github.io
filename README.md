@@ -56,6 +56,12 @@ org's public repos (starting with this one) have a real home instead of an empty
 - [`CONTRIBUTING.md`](https://github.com/theholyearthfoundation/.github/blob/main/CONTRIBUTING.md)
 - [`SECURITY.md`](https://github.com/theholyearthfoundation/.github/blob/main/SECURITY.md)
 
+
+## 📄 License
+- 💻 **Code:** MIT, see [`LICENSE`](https://github.com/theholyearthfoundation/.github/blob/main/LICENSE)
+- 📝 **Written content** (docs, changelog and library prose, READMEs): CC BY-SA 4.0, see [`LICENSE-CONTENT`](https://github.com/theholyearthfoundation/.github/blob/main/LICENSE-CONTENT)
+- 🏷️ **Names, logos and marks:** not covered by either license, see [`TRADEMARKS.md`](https://github.com/theholyearthfoundation/.github/blob/main/TRADEMARKS.md)
+
 ---
 
 <div align="center">
