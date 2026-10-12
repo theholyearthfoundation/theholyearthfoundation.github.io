@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-arrival-site="portal">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,23 +9,31 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="/favicon.png">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<!-- THEF's arrival kit, shared with the AstroLog and served from /arrival/ on this site: the palette
+     (Canopy, Morning mist), "Choose how you arrive", motion / contrast / cursor effects (applied
+     before first paint, so it loads here in <head>), the welcome guide, "/" search and the avatars. -->
+<link rel="stylesheet" href="/arrival/arrival.css">
+<link rel="stylesheet" href="/arrival/org.css">
+<script src="/arrival/org.js"></script>
+<script src="/arrival/arrival.js"></script>
 <link rel="stylesheet" href="/thef.css">
+<link rel="canonical" href="https://theholyearthfoundation.github.io/">
+<!-- Link previews (WhatsApp, iMessage, Telegram…): every URL absolute, a real JPEG. -->
+<meta property="og:site_name" content="The Holy Earth Foundation on GitHub">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://theholyearthfoundation.github.io/">
 <meta property="og:title" content="The Holy Earth Foundation">
 <meta property="og:description" content="I am one Self, united with my Creator — Plants &amp; Miracles, bridging A Course in Miracles with plant medicine traditions.">
 <meta property="og:image" content="https://theholyearthfoundation.github.io/social-card.jpg">
-<meta property="og:url" content="https://theholyearthfoundation.github.io/">
-<meta property="og:type" content="website">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="629">
+<meta property="og:image:alt" content="The Holy Earth Foundation: the foundation's eagle-and-condor mark over the canopy.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Holy Earth Foundation">
 <meta name="twitter:description" content="I am one Self, united with my Creator — Plants &amp; Miracles, bridging A Course in Miracles with plant medicine traditions.">
 <meta name="twitter:image" content="https://theholyearthfoundation.github.io/social-card.jpg">
-<script>
-(function () {
-  var saved = null;
-  try { saved = localStorage.getItem("thef-theme"); } catch (e) {}
-  document.documentElement.dataset.theme = saved === "light" || saved === "dark" ? saved : "dark";
-})();
-</script>
+<meta name="twitter:image:alt" content="The Holy Earth Foundation: the foundation's eagle-and-condor mark over the canopy.">
 <style>
   .hero {
     display: grid;
@@ -79,7 +87,13 @@
   .flyer-dl .ph { color: var(--gold); font-size: 1.1rem; }
   .flyer-dl small { font-weight: 400; color: var(--moss); }
 
-  .amaringo { padding: 1.8rem 2.3rem; margin-bottom: 3rem; }
+  .amaringo { padding: 1.8rem 2.3rem; margin-bottom: 1.5rem; }
+  .people { padding: 1.8rem 2.3rem; margin-bottom: 3rem; }
+  .people h2 { font-size: 1.9rem; margin: 0 0 0.4rem; display: flex; align-items: center; gap: 0.6rem; }
+  .people h2 .ph { font-size: 1.5rem; color: var(--gold); }
+  .people > p { margin: 0 0 1.2rem; color: var(--moss); max-width: 44rem; }
+  .hint { margin: 1.1rem 0 0; font-size: 0.92rem; color: var(--moss); }
+  .hint kbd { font: 600 0.75rem/1 ui-monospace, Menlo, monospace; padding: 0.15rem 0.4rem; border: 1px solid var(--line-strong); border-bottom-width: 2px; border-radius: 5px; background: var(--panel-solid); color: var(--mist); }
   .amaringo p { margin: 0; color: var(--moss); max-width: 44rem; }
 
   .follow { margin-bottom: 3rem; }
@@ -101,7 +115,7 @@
   @media (max-width: 720px) {
     .hero { grid-template-columns: 70px 1fr; gap: 1.2rem; padding-top: 2rem; align-items: start; }
     .hero-vine { height: 440px; }
-    .teaching, .amaringo { padding: 1.4rem 1.2rem; }
+    .teaching, .amaringo, .people { padding: 1.4rem 1.2rem; }
     .nav-links .opt { display: none; }
   }
   @media (max-width: 460px) {
@@ -119,10 +133,8 @@
         <a href="https://theholyearthfoundation.github.io/changelog-astro-public/changelog"><i class="ph ph-clock-counter-clockwise" aria-hidden="true"></i> Changelog</a>
         <a href="https://theholyearthfoundation.github.io/changelog-astro-public/library"><i class="ph ph-books" aria-hidden="true"></i> Library</a>
         <a class="opt" href="https://theholyearthfoundation.github.io/changelog-astro-public/"><i class="ph ph-door-open" aria-hidden="true"></i> Astro Porch</a>
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch between light and dark">
-          <i class="ph ph-sun theme-icon-light" aria-hidden="true"></i>
-          <i class="ph ph-moon theme-icon-dark" aria-hidden="true"></i>
-        </button>
+        <!-- Search, the lights + motion, and the light & motion drawer (arrival kit). -->
+        <arrival-controls></arrival-controls>
       </nav>
     </div>
   </header>
@@ -150,6 +162,7 @@
           <a class="btn primary" href="https://retreats.iamoneself.com"><i class="ph ph-butterfly" aria-hidden="true"></i> retreats.iamoneself.com</a>
           <a class="btn" href="https://www.iamoneself.com"><i class="ph ph-globe" aria-hidden="true"></i> iamoneself.com</a>
         </div>
+        <p class="hint arr-hint">Press <kbd>/</kbd> to search everything here and in the AstroLog. New here? <a href="#welcome" data-arrival-open="guide">Take the welcome tour</a>.</p>
       </div>
     </section>
 
@@ -176,6 +189,12 @@
       <p>Amazonian visionary art and Chaiconi Bari teaching, trained under Pablo Cesar Amaringo Shuña: <a href="https://drasticstatic.github.io/david-amaringo-public-preview/">preview the site</a></p>
     </section>
 
+    <section class="people panel" aria-labelledby="people-title">
+      <h2 id="people-title"><i class="ph ph-users-three" aria-hidden="true"></i> Who's doing the work</h2>
+      <p>Every AstroLog entry credits whoever did it, named the way the foundation's own pages name them. As more people join the work, they'll appear here.</p>
+      <arrival-people></arrival-people>
+    </section>
+
     <section class="follow" aria-labelledby="follow-title">
       <h2 id="follow-title">Follow the work</h2>
       <p>What's been built so far, in plain language, and the code behind it.</p>
@@ -197,6 +216,7 @@
       <a href="https://theholyearthfoundation.github.io/changelog-astro-public/"><i class="ph ph-door-open" aria-hidden="true"></i> Astro Porch</a>
       <a href="https://theholyearthfoundation.github.io/changelog-astro-public/changelog"><i class="ph ph-clock-counter-clockwise" aria-hidden="true"></i> Changelog</a>
       <a href="https://theholyearthfoundation.github.io/changelog-astro-public/library"><i class="ph ph-books" aria-hidden="true"></i> Library</a>
+      <a href="#welcome" data-arrival-open="guide"><i class="ph ph-compass" aria-hidden="true"></i> Welcome guide</a>
       <a href="/404.html"><i class="ph ph-map-trifold" aria-hidden="true"></i> Lost the trail?</a>
       <a href="https://github.com/theholyearthfoundation" target="_blank" rel="noopener"><i class="ph ph-github-logo" aria-hidden="true"></i> Source repo</a>
       <a href="https://www.iamoneself.com/about-the-speaker" target="_blank" rel="noopener"><i class="ph ph-chat-circle-text" aria-hidden="true"></i> Reach out</a>

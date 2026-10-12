@@ -12,77 +12,9 @@
   font-display: swap;
 }
 
-/* ── THEF palette: the canopy at first light ──────────────────────────────────────────────────
-   Dark (default) is the forest before dawn: deep canopy green, fireflies, a sky-blue strand and a
-   sunrise-gold strand. Light is the same forest an hour later: cool morning mist over leaf green.
-   The two vine strands are --sky (A Course in Miracles, the Eagle) and --gold (plant medicine, the
-   Condor); where they meet is --glow (single-mindedness, the Barn Owl). Older names (--bg, --ink,
-   --signature…) stay mapped so nothing that reads them breaks. */
-:root {
-  --canopy: #edf5f1;
-  --canopy-2: #e2eee8;
-  --panel: rgba(255, 255, 255, 0.78);
-  --panel-solid: #ffffff;
-  --mist: #12312a;
-  --moss: #46665a;
-  --faint: #7b968a;
-  --sky: #0b6a96;
-  --gold: #8f600a;
-  --leaf: #2e7a44;
-  --river: #13786c;
-  --glow: #b07d12;
-  --line: rgba(18, 49, 42, 0.13);
-  --line-strong: rgba(18, 49, 42, 0.26);
-  --shadow: 0 22px 50px -30px rgba(18, 49, 42, 0.45);
-  --firefly: #1f5c4a;
-  --spark: #b7791f;
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --canopy: #0f2420;
-    --canopy-2: #143029;
-    --panel: rgba(22, 52, 45, 0.62);
-    --panel-solid: #16342d;
-    --mist: #eaf1e4;
-    --moss: #a3b8ac;
-    --faint: #6f877c;
-    --sky: #8ed1f2;
-    --gold: #e9b949;
-    --leaf: #86c98f;
-    --river: #48b5a8;
-    --glow: #ffe3a1;
-    --line: rgba(142, 209, 242, 0.14);
-    --line-strong: rgba(233, 185, 73, 0.32);
-    --shadow: 0 26px 60px -30px rgba(0, 0, 0, 0.7);
-    --firefly: #e2f0a8;
-    --spark: #f2c14e;
-    color-scheme: dark;
-  }
-}
-
-:root[data-theme="dark"] {
-  --canopy: #0f2420;
-  --canopy-2: #143029;
-  --panel: rgba(22, 52, 45, 0.62);
-  --panel-solid: #16342d;
-  --mist: #eaf1e4;
-  --moss: #a3b8ac;
-  --faint: #6f877c;
-  --sky: #8ed1f2;
-  --gold: #e9b949;
-  --leaf: #86c98f;
-  --river: #48b5a8;
-  --glow: #ffe3a1;
-  --line: rgba(142, 209, 242, 0.14);
-  --line-strong: rgba(233, 185, 73, 0.32);
-  --shadow: 0 26px 60px -30px rgba(0, 0, 0, 0.7);
-  --firefly: #e2f0a8;
-  --spark: #f2c14e;
-  color-scheme: dark;
-}
-
+/* The palette (Canopy and Morning mist, the vine's sky / gold / glow, fireflies) lives in
+   /arrival/org.css, shared with the AstroLog through the arrival kit. Load that first. Older names
+   (--bg, --ink, --signature…) stay mapped here so nothing that reads them breaks. */
 :root {
   --bg: var(--canopy);
   --surface: var(--panel-solid);
@@ -253,39 +185,6 @@ a:hover {
 .nav-links a:hover {
   color: var(--mist);
   background: var(--panel);
-}
-
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  margin-left: 0.35rem;
-  border-radius: 999px;
-  border: 1px solid var(--line-strong);
-  background: var(--panel);
-  color: var(--gold);
-  cursor: pointer;
-  padding: 0;
-  font-size: 1rem;
-}
-
-.theme-toggle:hover {
-  border-color: var(--gold);
-}
-
-.theme-icon-light,
-.theme-icon-dark {
-  display: none;
-}
-
-:root[data-theme="dark"] .theme-icon-light {
-  display: inline;
-}
-
-:root:not([data-theme="dark"]) .theme-icon-dark {
-  display: inline;
 }
 
 /* ── buttons ── */
