@@ -61,6 +61,23 @@
   .strands strong { display: block; font-size: 1.08rem; }
   .strands span { color: var(--moss); font-size: 0.95rem; }
   .teaching .speaker { margin: 0; color: var(--moss); }
+  /* Each strand opens its page of Kenney's Plants & Miracles flyer in the library. */
+  .strands strong a { color: inherit; text-decoration: none; }
+  .strands strong a::after { content: " →"; color: var(--gold); opacity: 0.55; transition: opacity 0.2s; }
+  .strands strong a:hover, .strands strong a:focus-visible { color: var(--gold); }
+  .strands strong a:hover::after, .strands strong a:focus-visible::after { opacity: 1; }
+  .flyer { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem 1.2rem; margin: 0 0 1.4rem; padding: 0.9rem 1.1rem; border-radius: 18px; background: color-mix(in srgb, var(--gold) 8%, var(--panel)); border: 1px solid color-mix(in srgb, var(--gold) 32%, transparent); }
+  .flyer-main { flex: 1 1 22rem; display: grid; grid-template-columns: 64px 1fr; gap: 1rem; align-items: center; text-decoration: none; color: var(--mist); }
+  .flyer-main:hover { color: var(--mist); }
+  .flyer-main img { width: 64px; height: auto; border-radius: 8px; box-shadow: 0 0 0 1px var(--line-strong), 0 10px 22px -10px rgba(0, 0, 0, 0.6); transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .flyer-main:hover img { transform: rotate(-2deg) scale(1.05); }
+  .flyer-main b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 1.25rem; line-height: 1.2; color: var(--gold); }
+  .flyer-main span span { display: block; font-size: 0.92rem; color: var(--moss); }
+  .flyer-main:hover b { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+  .flyer-dl { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.55rem 1rem; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--panel); color: var(--mist); text-decoration: none; font-weight: 600; font-size: 0.92rem; white-space: nowrap; }
+  .flyer-dl:hover { color: var(--mist); border-color: var(--gold); }
+  .flyer-dl .ph { color: var(--gold); font-size: 1.1rem; }
+  .flyer-dl small { font-weight: 400; color: var(--moss); }
 
   .amaringo { padding: 1.8rem 2.3rem; margin-bottom: 3rem; }
   .amaringo p { margin: 0; color: var(--moss); max-width: 44rem; }
@@ -140,10 +157,17 @@
       <h2 id="teaching-title"><i class="ph ph-butterfly" aria-hidden="true"></i> I Am One Self — Plants &amp; Miracles</h2>
       <p>The vine beside the title is this teaching drawn out: two strands that start apart and grow into one.</p>
       <ul class="strands">
-        <li><span class="swatch" style="--c: var(--sky)" aria-hidden="true"></span><div><strong>🦅 The Eagle</strong><span>A Course in Miracles</span></div></li>
-        <li><span class="swatch" style="--c: var(--gold)" aria-hidden="true"></span><div><strong>🐍 The Condor</strong><span>Plant Medicine traditions</span></div></li>
-        <li><span class="swatch one" style="--c: var(--glow)" aria-hidden="true"></span><div><strong>🦉 The Barn Owl</strong><span>Single-Mindedness — the two as one</span></div></li>
+        <li><span class="swatch" style="--c: var(--sky)" aria-hidden="true"></span><div><strong><a href="https://theholyearthfoundation.github.io/changelog-astro-public/library/plants-and-miracles-the-eagle">🦅 The Eagle</a></strong><span>A Course in Miracles</span></div></li>
+        <li><span class="swatch" style="--c: var(--gold)" aria-hidden="true"></span><div><strong><a href="https://theholyearthfoundation.github.io/changelog-astro-public/library/plants-and-miracles-the-condor">🐍 The Condor</a></strong><span>Plant Medicine traditions</span></div></li>
+        <li><span class="swatch one" style="--c: var(--glow)" aria-hidden="true"></span><div><strong><a href="https://theholyearthfoundation.github.io/changelog-astro-public/library/plants-and-miracles-their-union">🦉 The Barn Owl</a></strong><span>Single-Mindedness — the two as one</span></div></li>
       </ul>
+      <div class="flyer">
+        <a class="flyer-main" href="https://theholyearthfoundation.github.io/changelog-astro-public/library/plants-and-miracles">
+          <img src="/plants-and-miracles/flyer-cover-thumb.jpg" alt="" width="64" height="83" loading="lazy">
+          <span><b>Plants &amp; Miracles: Flight of the Eagle and the Condor</b><span>Kenney's flyer, one teaching at a time: the Eagle, the Condor, their union, and the Path of Awakening</span></span>
+        </a>
+        <a class="flyer-dl" href="/plants-and-miracles/plants-and-miracles-flyer.pdf" download="Plants and Miracles - Flight of the Eagle and the Condor - Isaiah Kenney.pdf"><i class="ph ph-download-simple" aria-hidden="true"></i> Download the flyer <small>PDF, 31 MB</small></a>
+      </div>
       <p class="speaker">Retreats and spiritual coaching led by Kenney: <a href="https://www.iamoneself.com/about-the-speaker">About the Speaker</a></p>
     </section>
 
