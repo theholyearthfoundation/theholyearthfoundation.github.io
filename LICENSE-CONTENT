@@ -1,0 +1,24 @@
+Written content in this repository (documentation, changelog entries, library
+articles, READMEs and other prose) is licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).
+
+Copyright (c) 2026 The Holy Earth Foundation
+
+Summary: you may share and adapt this content for any purpose, even commercially,
+if you give appropriate credit, link to the license, indicate if changes were made,
+and distribute your contributions under the same license.
+
+  Human-readable summary: https://creativecommons.org/licenses/by-sa/4.0/
+  Full legal code:        https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+Not covered by this license:
+  - Source code and configuration: see LICENSE (MIT).
+  - Names, logos and marks: see TRADEMARKS.md.
+  - Third-party material (for example other companies' logos shown with
+    gratitude), which belongs to its owners.
+
+Carve-out: Isaiah Kenney's teaching material
+--------------------------------------------
+The "Plants and Miracles / Flight of the Eagle and the Condor" teaching material is
+(c) Isaiah Kenney. It is shared with permission and is NOT covered by this
+repository's licenses until he chooses his own terms. On this site that means the flyer PDF (`plants-and-miracles/plants-and-miracles-flyer.pdf`) and everything under `/plants-and-miracles/`.
