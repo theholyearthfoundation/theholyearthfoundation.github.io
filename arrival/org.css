@@ -172,10 +172,9 @@
 .nav-links arrival-controls {
   margin-left: 0.35rem;
 }
-@media (max-width: 1440px) {
-  .site-header [data-arr-drawer] .arr-chip-label {
-    display: none;
-  }
+/* The drawer is icon-only in THEF's headers at every width (it keeps its aria-label). */
+.site-header [data-arr-drawer] .arr-chip-label {
+  display: none;
 }
 @media (max-width: 1240px) {
   .site-header .arr-chip-search .arr-chip-label,
