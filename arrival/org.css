@@ -164,33 +164,27 @@
   box-shadow: 0 0 22px -6px color-mix(in srgb, var(--glow) 80%, transparent);
 }
 
-/* ── THEF's header (.site-header): the kit's tools sit after the pages ──────────────────────── */
+/* ── THEF's header (.site-header, kit 1.2): one row at every width. The brand, the kit's navbar
+      (it folds into "More", then into a Menu button below 1100px) and the kit's tools. The kit
+      hides the tools' word labels while its nav is on the page; the drawer stays icon-only here at
+      every width (it keeps its aria-label). ─────────────────────────────────────────────────── */
 .site-header arrival-controls {
   flex: none;
 }
-.nav-links + arrival-controls,
-.nav-links arrival-controls {
-  margin-left: 0.35rem;
-}
-/* The drawer is icon-only in THEF's headers at every width (it keeps its aria-label). */
 .site-header [data-arr-drawer] .arr-chip-label {
   display: none;
 }
-@media (max-width: 1240px) {
-  .site-header .arr-chip-search .arr-chip-label,
-  .site-header .arr-chip-search kbd {
-    display: none;
-  }
-  .site-header .arr-chip-search {
-    width: 34px;
-    padding: 0;
-    justify-content: center;
-  }
+/* The current page's link, and the bespoke network card, take the twin vine's gold and sky. */
+.site-header .arr-nav-a[aria-current="page"] .ph,
+.site-header .arr-nav-a.is-current .ph {
+  color: var(--gold);
 }
-@media (max-width: 1000px) {
-  .site-header .nav-links .opt {
-    display: none;
-  }
+.arr-plat-bespoke {
+  background:
+    radial-gradient(120% 140% at 100% 0%, color-mix(in srgb, var(--gold) 22%, transparent), transparent 60%),
+    radial-gradient(90% 120% at 0% 100%, color-mix(in srgb, var(--sky) 20%, transparent), transparent 60%),
+    radial-gradient(80% 90% at 50% 120%, color-mix(in srgb, var(--leaf) 16%, transparent), transparent 60%),
+    var(--surface-muted);
 }
 
 /* ── motion: Breeze is the forest as it's always been; Bloom quickens it; Still stops it (the

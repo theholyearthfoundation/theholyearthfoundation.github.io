@@ -8,8 +8,9 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="/favicon.png">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-<!-- The arrival kit (no first-visit splash on a wrong turn; "/" search still works). Every link and
-     asset on this page is absolute: it's served for any missing path, at any depth. -->
+<!-- The arrival kit v1.2 (no first-visit splash on a wrong turn; "/" search, the navbar and the
+     contact and community windows still work). Every link and asset on this page is absolute or
+     root-relative: it's served for any missing path, at any depth. -->
 <link rel="stylesheet" href="/arrival/arrival.css">
 <link rel="stylesheet" href="/arrival/org.css">
 <script src="/arrival/org.js"></script>
@@ -24,13 +25,13 @@
 <meta property="og:image" content="https://theholyearthfoundation.github.io/social-card.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="629">
-<meta property="og:image:alt" content="The Holy Earth Foundation: the foundation's eagle-and-condor mark over the canopy.">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Holy Earth Foundation on GitHub: the foundation's mark and its twin vine of sky and gold, on the canopy's deep green.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Page not found — The Holy Earth Foundation">
 <meta name="twitter:description" content="Not every path leads where you expect -- this one doesn't exist, but you're welcome to sit with that for a moment.">
 <meta name="twitter:image" content="https://theholyearthfoundation.github.io/social-card.jpg">
-<meta name="twitter:image:alt" content="The Holy Earth Foundation: the foundation's eagle-and-condor mark over the canopy.">
+<meta name="twitter:image:alt" content="The Holy Earth Foundation on GitHub: the foundation's mark and its twin vine of sky and gold, on the canopy's deep green.">
 <style>
   .lost { max-width: 620px; margin: 0 auto; padding: 3rem 1.25rem 2rem; text-align: center; }
   .lost-vine { width: 200px; height: 320px; margin: 0 auto 1.4rem; }
@@ -46,13 +47,16 @@
 </head>
 <body>
   <canvas id="starfield-canvas" aria-hidden="true"></canvas>
+  <a class="skip" href="#main">Skip to content</a>
+  <!-- The same one-row header as every page: the brand, the kit's navbar and the kit's tools. -->
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="https://theholyearthfoundation.github.io/"><img src="https://theholyearthfoundation.github.io/favicon.svg" alt="" width="30" height="30"><span class="brand-title">THEF</span></a>
+      <a class="brand" href="https://theholyearthfoundation.github.io/" aria-label="The Holy Earth Foundation on GitHub, home"><img src="https://theholyearthfoundation.github.io/favicon.svg" alt="" width="30" height="30"><span class="brand-title arr-brand-text">THEF</span></a>
+      <arrival-nav></arrival-nav>
       <arrival-controls></arrival-controls>
     </div>
   </header>
-  <main class="lost">
+  <main id="main" class="lost">
     <div class="lost-vine"><svg class="vine" viewBox="0 0 200 320" aria-hidden="true" focusable="false">
 <defs><radialGradient id="vine-crown-glow"><stop offset="0" style="stop-color:var(--glow);stop-opacity:.95"/><stop offset=".45" style="stop-color:var(--glow);stop-opacity:.35"/><stop offset="1" style="stop-color:var(--glow);stop-opacity:0"/></radialGradient></defs>
 <path class="strand strand-sky" pathLength="1" d="M90.8 294L90.8 292.9L90.8 291.8L90.8 290.6L90.8 289.5L90.9 288.4L91 287.3L91.1 286.2L91.2 285.1L91.3 283.9L91.5 282.8L91.7 281.7L92 280.6L92.2 279.5L92.5 278.4L92.8 277.3L93.1 276.1L93.5 275L93.8 273.9L94.2 272.8L94.7 271.7L95.1 270.6L95.6 269.4L96.1 268.3L96.6 267.2L97.1 266.1L97.7 265L98.2 263.9L98.8 262.7L99.4 261.6L100 260.5L100.6 259.4L101.2 258.3L101.9 257.1L102.5 256L103.2 254.9L103.8 253.8L104.5 252.7L105.1 251.6L105.8 250.4L106.4 249.3L107 248.2L107.7 247.1L108.3 246L108.9 244.9L109.5 243.8L110 242.6L110.6 241.5L111.1 240.4L111.6 239.3L112.1 238.2L112.6 237.1L113 235.9L113.4 234.8L113.8 233.7L114.1 232.6L114.4 231.5L114.7 230.3L114.9 229.2L115.1 228.1L115.3 227L115.4 225.9L115.4 224.8L115.5 223.6L115.5 222.5L115.4 221.4L115.3 220.3L115.1 219.2L114.9 218.1L114.7 216.9L114.4 215.8L114.1 214.7L113.7 213.6L113.2 212.5L112.8 211.4L112.2 210.3L111.7 209.1L111.1 208L110.4 206.9L109.7 205.8L109 204.7L108.2 203.6L107.4 202.4L106.6 201.3L105.7 200.2L104.9 199.1L103.9 198L103 196.9L102 195.7L101 194.6L100 193.5L99 192.4L97.9 191.3L96.9 190.1L95.8 189L94.8 187.9L93.7 186.8L92.6 185.7L91.6 184.6L90.5 183.4L89.5 182.3L88.5 181.2L87.5 180.1L86.5 179L85.5 177.9L84.6 176.8L83.7 175.6L82.8 174.5L82 173.4L81.2 172.3L80.5 171.2L79.8 170.1L79.1 168.9L78.5 167.8L78 166.7L77.5 165.6L77 164.5L76.6 163.3L76.3 162.2L76 161.1L75.9 160L75.7 158.9L75.7 157.8L75.7 156.7L75.7 155.5L75.9 154.4L76.1 153.3L76.4 152.2L76.7 151.1L77.2 150L77.7 148.8L78.2 147.7L78.9 146.6L79.6 145.5L80.3 144.4L81.2 143.3L82.1 142.1L83 141L84.1 139.9L85.1 138.8L86.3 137.7L87.5 136.5L88.7 135.4L90 134.3L91.3 133.2L92.7 132.1L94.1 131L95.5 129.8L97 128.7L98.5 127.6L100 126.5L101.5 125.4L103.1 124.3L104.6 123.2L106.2 122L107.8 120.9L109.3 119.8L110.9 118.7L112.4 117.6L114 116.5L115.5 115.3L116.9 114.2L118.4 113.1L119.8 112L121.2 110.9L122.5 109.8L123.8 108.6L125 107.5L126.2 106.4L127.3 105.3L128.3 104.2L129.3 103L130.2 101.9L131 100.8L131.8 99.7L132.5 98.6L133.1 97.5L133.6 96.3L134 95.2L134.3 94.1L134.5 93L134.7 91.9L134.7 90.8L134.6 89.7L134.5 88.5L134.2 87.4L133.9 86.3L133.4 85.2L132.9 84.1L132.2 83L131.5 81.8L130.7 80.7L129.7 79.6L128.7 78.5L127.6 77.4L126.4 76.3L125.1 75.1L123.7 74L122.3 72.9L120.7 71.8L119.1 70.7L117.4 69.5L115.7 68.4L113.9 67.3L112 66.2L110.1 65.1L108.2 64L106.2 62.8L104.2 61.7L102.1 60.6L100 59.5L97.9 58.4L95.8 57.3L93.6 56.2L91.5 55L89.4 53.9L87.2 52.8L85.1 51.7L83 50.6L81 49.5L79 48.3L77 47.2L75 46.1L73.2 45L71.3 43.9L69.6 42.8L67.9 41.6L66.2 40.5L64.7 39.4L63.2 38.3L61.9 37.2L60.6 36.1L59.4 34.9L58.4 33.8L57.4 32.7L56.5 31.6L55.8 30.5L55.2 29.3L54.6 28.2L54.3 27.1L54 26"/>
@@ -74,6 +78,7 @@
       <a class="btn primary" href="https://theholyearthfoundation.github.io/">🌎 Back to the org page</a>
       <button type="button" class="btn" data-arrival-open="search"><i class="ph ph-magnifying-glass" aria-hidden="true"></i> Search instead <kbd>/</kbd></button>
       <a class="btn" href="https://theholyearthfoundation.github.io/changelog-astro-public/teachings"><i class="ph ph-flower-lotus" aria-hidden="true"></i> Teachings</a>
+      <a class="btn" href="https://theholyearthfoundation.github.io/map/"><i class="ph ph-map-trifold" aria-hidden="true"></i> The map</a>
       <a class="btn" href="https://retreats.iamoneself.com">🦋 retreats.iamoneself.com</a>
       <a class="btn" href="https://www.iamoneself.com">🌐 iamoneself.com</a>
       <a class="btn" href="https://theholyearthfoundation.github.io/changelog-astro-public/"><i class="ph ph-door-open" aria-hidden="true"></i> Astro Porch</a>
@@ -81,15 +86,20 @@
     </div>
   </main>
 
+  <!-- Every way around, in groups (drawn by the kit from org.js: footer.groups). -->
+  <div class="page-foot"><arrival-footer></arrival-footer></div>
+
   <footer class="universal-footer">
     <div class="footer-inner">
       <span class="footer-brand">The Holy Earth Foundation</span>
-      <a href="https://theholyearthfoundation.github.io/changelog-astro-public/"><i class="ph ph-door-open" aria-hidden="true"></i> Astro Porch</a>
+      <a href="https://theholyearthfoundation.github.io/changelog-astro-public/"><i class="ph ph-door-open" aria-hidden="true"></i> <span class="long">Astro </span>Porch</a>
+      <a href="https://theholyearthfoundation.github.io/changelog-astro-public/teachings"><i class="ph ph-flower-lotus" aria-hidden="true"></i> Teachings</a>
       <a href="https://theholyearthfoundation.github.io/changelog-astro-public/changelog"><i class="ph ph-clock-counter-clockwise" aria-hidden="true"></i> Changelog</a>
       <a href="https://theholyearthfoundation.github.io/changelog-astro-public/library"><i class="ph ph-books" aria-hidden="true"></i> Library</a>
-      <a href="https://theholyearthfoundation.github.io/changelog-astro-public/teachings"><i class="ph ph-flower-lotus" aria-hidden="true"></i> Teachings</a>
-      <a href="https://www.iamoneself.com/about-the-speaker"><i class="ph ph-chat-circle-text" aria-hidden="true"></i> Reach out</a>
-      <a href="http://www.itcfonts.com" target="_blank" rel="noopener" class="font-credit">Headings set in PapyrusStd, Chris Costello / ITC</a>
+      <a href="https://theholyearthfoundation.github.io/map/"><i class="ph ph-map-trifold" aria-hidden="true"></i> Map</a>
+      <a href="https://www.iamoneself.com/about-the-speaker" data-arrival-open="contact"><i class="ph ph-envelope-simple" aria-hidden="true"></i> Reach out</a>
+      <a href="https://theholyearthfoundation.github.io/donate/"><i class="ph ph-heart" aria-hidden="true"></i> Donate</a>
+      <a href="http://www.itcfonts.com" target="_blank" rel="noopener" class="font-credit"><i class="ph ph-text-aa" aria-hidden="true"></i> Headings set in PapyrusStd, Chris Costello / ITC</a>
     </div>
   </footer>
   <script src="https://theholyearthfoundation.github.io/starfield.js"></script>
