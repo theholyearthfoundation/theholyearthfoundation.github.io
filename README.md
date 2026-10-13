@@ -55,6 +55,7 @@ org's public repos (starting with this one) have a real home instead of an empty
 
 - [`CONTRIBUTING.md`](https://github.com/theholyearthfoundation/.github/blob/main/CONTRIBUTING.md)
 - [`SECURITY.md`](https://github.com/theholyearthfoundation/.github/blob/main/SECURITY.md)
+- [`SOCIAL-PREVIEWS.md`](https://github.com/theholyearthfoundation/.github/blob/main/SOCIAL-PREVIEWS.md): how to refresh link previews in Telegram, LinkedIn, Facebook and more, and which pages have their own share image
 
 
 ## 📄 License
