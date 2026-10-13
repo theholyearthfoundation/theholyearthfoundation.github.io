@@ -65,7 +65,7 @@
 
     modes: [
       { id: "dark", name: "Canopy", note: "The forest before dawn: deep canopy green, fireflies, and the vine's sky and gold strands.", swatch: ["#0f2420", "#e9b949"], dark: true },
-      { id: "light", name: "Morning mist", note: "The same forest an hour later: cool mist over leaf green.", swatch: ["#edf5f1", "#0b6a96"] },
+      { id: "light", name: "Morning mist", note: "The same forest an hour later: cool mist over leaf green.", swatch: ["#edf5f1", "#0b6a96"], calm: true },
       {
         id: "sun",
         name: "Follow the sun",
@@ -80,6 +80,14 @@
       },
     ],
     defaultMode: "dark",
+
+    // Reading mode: one tap for the calmest page (Morning mist, the forest still, more contrast, no
+    // vine); another tap goes back to how the visitor had it.
+    reading: { light: "light" },
+
+    // "What's new since your last visit": entries, write-ups and ledger changes newer than the
+    // visitor's last visit, read from the AstroLog's latest.json.
+    news: { sources: [LOG + "/latest.json"] },
 
     // Fireflies drift over every page. With cursor effects on, a twin vine grows behind the pointer:
     // a sky strand and a gold strand braiding together and meeting where the pointer is, leaves
@@ -117,6 +125,13 @@
         text: "Technical write-ups on how the sites are built: the bugs, the fixes, and why. The changelog says what changed; the library explains how it works.",
         href: LOG + "/library",
         label: "Open the library",
+      },
+      ledger: {
+        name: "The ledger",
+        icon: "scroll",
+        text: "Every public change to the foundation's open repositories on GitHub, in plain words, sorted by kind and grouped by month, day and repository. It gathers itself again every day.",
+        href: LOG + "/ledger",
+        label: "Open the ledger",
       },
     },
 
@@ -184,6 +199,7 @@
         { t: "Download Kenney's flyer (PDF)", k: "teaching", i: "download-simple", h: ROOT + "/plants-and-miracles/plants-and-miracles-flyer.pdf", x: "plants miracles flyer original pdf" },
         { t: "David Amaringo: preview the site", k: "link", i: "palette", h: "https://drasticstatic.github.io/david-amaringo-public-preview/", x: "amazonian visionary art chaiconi bari" },
         { t: "THEF on GitHub", k: "link", i: "github-logo", h: "https://github.com/theholyearthfoundation", x: "organization repos source code" },
+        { t: "The ledger: every public change", k: "page", i: "scroll", h: LOG + "/ledger", pin: true, x: "commits history github activity record public repositories" },
       ],
     },
   };

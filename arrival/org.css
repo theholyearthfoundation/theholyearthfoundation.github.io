@@ -172,9 +172,20 @@
 .nav-links arrival-controls {
   margin-left: 0.35rem;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1440px) {
   .site-header [data-arr-drawer] .arr-chip-label {
     display: none;
+  }
+}
+@media (max-width: 1240px) {
+  .site-header .arr-chip-search .arr-chip-label,
+  .site-header .arr-chip-search kbd {
+    display: none;
+  }
+  .site-header .arr-chip-search {
+    width: 34px;
+    padding: 0;
+    justify-content: center;
   }
 }
 @media (max-width: 1000px) {
@@ -188,6 +199,17 @@
 [data-motion="vivid"] .vine .strand,
 [data-motion="vivid"] .vine .strand-rib {
   animation-duration: 1.9s;
+}
+
+/* ── reading mode: the fireflies all but fade, the hero vine rests ──────────────────────────── */
+:root[data-reading="on"] #starfield-canvas {
+  opacity: 0.2;
+}
+:root[data-reading="on"] body {
+  background: var(--canopy);
+}
+:root[data-reading="on"] .vine-crown {
+  opacity: 0.4;
 }
 
 /* ── more contrast: the canopy's own tokens follow the kit's, and the fireflies go quiet ───── */
