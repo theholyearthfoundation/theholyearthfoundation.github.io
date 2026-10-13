@@ -52,25 +52,6 @@
     );
   }
 
-  // Kit 1.2.0 measures the navbar when the page's fonts are "ready", but Literata and PapyrusStd can
-  // finish loading after that (Phosphor's icons often arrive first), leaving a stale fit: the bar's
-  // last item clipped instead of folded into "More". When any font finishes loading, nudge each
-  // <arrival-nav> by one pixel for one frame so the kit's own ResizeObserver measures it again.
-  // (Reported for the kit itself: a `loadingdone` listener in renderNav would make this unneeded.)
-  try {
-    if (document.fonts && document.fonts.addEventListener) {
-      document.fonts.addEventListener("loadingdone", function () {
-        var navs = document.querySelectorAll("arrival-nav");
-        for (var i = 0; i < navs.length; i++) navs[i].style.marginRight = "1px";
-        requestAnimationFrame(function () {
-          requestAnimationFrame(function () {
-            for (var j = 0; j < navs.length; j++) navs[j].style.marginRight = "";
-          });
-        });
-      });
-    }
-  } catch (e) {}
-
   window.ARRIVAL = {
     org: {
       short: "THEF",
