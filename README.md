@@ -6,7 +6,7 @@
 
 # 🌎 The Holy Earth Foundation
 
-*Founded by Isaiah Kenneth Zimbleman ("Kenney")*
+*Founded by Isaiah (Kenney)*
 
 [![Home](https://img.shields.io/badge/🌐_Home-iamoneself.com-purple?style=flat)](https://www.iamoneself.com)
 [![Retreats](https://img.shields.io/badge/🌐_Retreat%20Portal-retreats.iamoneself.com-8A5A2B?style=flat)](https://retreats.iamoneself.com)
