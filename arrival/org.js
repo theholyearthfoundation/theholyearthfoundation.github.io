@@ -1,21 +1,28 @@
-/* The Holy Earth Foundation's arrival config, read by arrival.js (kit v1.3). Shared by every THEF page
-   that loads the kit: the entry portal (/, /donate/, /map/, the 404) and, by full URL, the AstroLog.
+/* The Holy Earth Foundation's arrival config, read by arrival.js (kit v1.4). Shared by every THEF page
+   that loads the kit: the entry portal (/, /donate/, /pledge/, /map/, the 404) and, by full URL, the
+   AstroLog.
 
    Every fact here comes from THEF's own public materials: this portal, the AstroLog, Kenney's Plants &
    Miracles flyer (as published in Teachings), iamoneself.com, retreats.iamoneself.com and David
    Amaringo's site. Anything the foundation hasn't published yet (a community space, a contacts page,
    a welcome from Kenney, wording about gifts) is marked as a placeholder or "coming soon" rather than
-   guessed, and no link or address is ever made up. No phone number or WhatsApp link is published
-   here: the contact window points at iamoneself.com's own contact page instead. People are named by
-   first name and last initial. Strings shown in the guide and the modals may hold simple HTML. */
+   guessed, and no link or address is ever made up. Kenney's WhatsApp, phone and Telegram show
+   directly in the contact window (Christopher's decision, 2026-10-22; they're public on
+   iamoneself.com). People are named by first name and last initial, except the founder, credited as
+   "Isaiah (Kenney)" (THEF's choice). Strings shown in the guide and the modals may hold simple HTML. */
 (function () {
   var ROOT = "https://theholyearthfoundation.github.io";
   var LOG = ROOT + "/changelog-astro-public";
   var TEACH = LOG + "/teachings";
   var SITE = "https://www.iamoneself.com";
   var SPEAKER = SITE + "/about-the-speaker";
-  var CONTACT = SITE + "/contact";
   var RETREATS = "https://retreats.iamoneself.com";
+  // Kenney's own WhatsApp, phone and Telegram (public on iamoneself.com; shown directly since
+  // 2026-10-22, Christopher's decision).
+  var WHATSAPP = "https://wa.me/18569792316";
+  var PHONE = "tel:+18569792316";
+  var PHONE_SHOWN = "+1 856-979-2316";
+  var TELEGRAM = "https://t.me/iamoneself";
   // David's site (a public preview on drasticstatic.github.io). Its own Contact page sends visitors
   // to Kenney's About the Speaker page; its Support David page is the one giving path that exists.
   var DAVID = "https://drasticstatic.github.io/david-amaringo-public-preview";
@@ -142,6 +149,7 @@
             { id: "community", label: "Community", icon: "users-three", href: ROOT + "/#community", open: "community", note: "Coming soon, and a sneak peek" },
             { id: "contact", label: "Reach out", icon: "envelope-simple", href: SPEAKER, open: "contact", note: "Every way to reach Kenney and the team" },
             { id: "donate", label: "Donate", icon: "heart", href: ROOT + "/donate/", note: "Ways to give, and thanks by name" },
+            { id: "pledge", label: "Pledge", icon: "handshake", href: ROOT + "/pledge/", note: "Sign a pledge of support: free, nothing sent" },
           ],
         },
         {
@@ -172,7 +180,7 @@
       label: "The Holy Earth Foundation, all the ways around",
       groups: [
         { label: "Explore", icon: "compass", items: ["portal", "porch", "teachings", "changelog", "library", "ledger", "map"] },
-        { label: "Get involved", icon: "hand-heart", items: ["community", "contact", "donate", { id: "guide", label: "Welcome guide", icon: "signpost", href: "#welcome", open: "guide" }] },
+        { label: "Get involved", icon: "hand-heart", items: ["community", "contact", "donate", "pledge", { id: "guide", label: "Welcome guide", icon: "signpost", href: "#welcome", open: "guide" }] },
         { label: "The sites", icon: "globe-hemisphere-west", items: ["home", "retreats", "david"] },
         { label: "About this build", icon: "wrench", items: ["roadmap", "sustainability", "github", { id: "source", label: "AstroLog source", icon: "code", href: "https://github.com/theholyearthfoundation/changelog-astro-public" }] },
       ],
@@ -180,12 +188,36 @@
     },
 
     // ── kit 1.2: one modal for every way to reach Kenney and the team ──────────────────────────
-    // Only paths the foundation's own sites publish. Kenney keeps in touch by WhatsApp; his number is
-    // on iamoneself.com's contact page, so this points there rather than repeating it.
+    // Only paths the foundation's own sites publish. Kenney keeps in touch by WhatsApp. His WhatsApp,
+    // phone and Telegram show here directly (Christopher's decision, 2026-10-22: they're already public
+    // on iamoneself.com). t.me/iamoneself is his Telegram channel, "I am One Self - Daily Thoughts".
     contact: {
       title: "Reach out",
       intro: "Every way to reach Kenney and the foundation's team, from its own sites. David A and the Chaiconi Bari team are reached the same way: his site sends visitors to Kenney's About the Speaker page.",
       paths: [
+        {
+          kind: "chat",
+          label: "WhatsApp",
+          href: WHATSAPP,
+          icon: "whatsapp-logo",
+          action: "Message on WhatsApp",
+          note: "Kenney keeps in touch by WhatsApp. In his words: “Contact me on WhatsApp or Email.”",
+        },
+        {
+          kind: "phone",
+          label: PHONE_SHOWN,
+          href: PHONE,
+          action: "Call or text",
+          note: "Kenney's number, for a call or a text.",
+        },
+        {
+          kind: "chat",
+          label: "Telegram: @iamoneself",
+          href: TELEGRAM,
+          icon: "telegram-logo",
+          action: "Open on Telegram",
+          note: "Kenney's Telegram channel, I am One Self - Daily Thoughts: “Come pray, practice, meditate, purify, and be in Spirit.”",
+        },
         {
           kind: "email",
           label: "info@IamOneSelf.com",
@@ -198,14 +230,7 @@
           href: SPEAKER,
           icon: "chat-circle-text",
           action: "Open the page",
-          note: "Kenney's own page. In his words: “Contact me on WhatsApp or Email.”",
-        },
-        {
-          kind: "chat",
-          label: "WhatsApp, Telegram, a call or a text",
-          href: CONTACT,
-          action: "See the contact page",
-          note: "I Am One Self's contact page lists the number to use for each, and suggests Telegram from outside the USA.",
+          note: "Kenney's own page: who he is, and his teaching.",
         },
         {
           kind: "page",
@@ -321,6 +346,26 @@
       crypto: {
         text: "Giving from a crypto wallet is planned for this page: one button for browser wallets, phone wallets and email sign-in. It isn't open yet.",
       },
+      // kit 1.4: "Receipts and taxes", claiming nothing. The foundation hasn't published a legal or
+      // tax status (its formal incorporation is still coming together, as its profile says), so the
+      // kit's defaults stand: ask us for a receipt; deductibility depends on status; not tax advice.
+      tax: {},
+    },
+
+    // ── kit 1.4: the dock (the one-row strip at the bottom) shows a fade and a chevron on the side
+    //    with more, so a phone visitor can tell it scrolls. The portal's and the AstroLog's dock are
+    //    both .universal-footer .footer-inner, the kit's default. ─────────────────────────────────
+    dock: { scroll: true },
+
+    // ── kit 1.4: a pledge of support, on its own page (/pledge/). A visitor signs it with a wallet:
+    //    a message, not a transaction: free, nothing sent, nothing recorded, and no counts. It uses
+    //    the same wallet connection as /donate/ (give.reownProjectId). The words are the
+    //    foundation's: giving is receiving (Christopher and Kenney's words, in the changelog). ─────
+    pledge: {
+      href: ROOT + "/pledge/",
+      text: "I support The Holy Earth Foundation and the work it holds: Plants & Miracles, the retreats and coaching of I Am One Self, and David A's visionary art and Chaiconi Bari teaching. Giving is receiving, and I offer my support in that spirit.",
+      intro: "If the foundation's work matters to you, you can say so by signing a short pledge with a crypto wallet. It's free: no gas and no money, and for now nothing is recorded.",
+      note: 'Signing a pledge isn\'t a gift and asks nothing more of you. To give as well, see <a href="' + ROOT + '/donate/">the ways to give</a>.',
     },
 
     record: {
@@ -367,9 +412,9 @@
         html:
           "<p>Kenney's teaching lives in a room of its own, apart from the technical library.</p>" +
           '<div class="arr-box arr-shape"><h3><i class="ph ph-bird" aria-hidden="true"></i>Plants &amp; Miracles</h3>' +
-          "<p>Flight of the Eagle and the Condor: Isaiah Kenney's flyer, taken apart into pages you can read, share, and come back to: the Eagle, the Condor, their union, the Path of Awakening, and where to begin. His words are quoted exactly as printed, and the original is there to download.</p>" +
+          "<p>Flight of the Eagle and the Condor, by Isaiah (Kenney): his flyer, taken apart into pages you can read, share, and come back to: the Eagle, the Condor, their union, the Path of Awakening, and where to begin. His words are quoted exactly as printed, and the original is there to download.</p>" +
           '<a class="arr-btn arr-btn-primary arr-shape" href="' + TEACH + '/plants-and-miracles"><i class="ph ph-arrow-right" aria-hidden="true"></i>Open Plants &amp; Miracles</a></div>' +
-          '<p class="arr-fine">The teaching is &copy; Isaiah Kenney, shared here with his permission.</p>',
+          '<p class="arr-fine">The teaching is &copy; Isaiah (Kenney), shared here with his permission.</p>',
       },
       light: {
         text: "Two lights from one forest: the canopy before dawn, and the same canopy an hour later under morning mist. Or let it follow the sun. Your choice follows you from the portal to the AstroLog.",
@@ -378,7 +423,7 @@
         text: "Fireflies drift over every page, and a twin vine, sky blue for A Course in Miracles and gold for plant medicine, grows behind your pointer until the two strands meet. Choose how much moves, and whether you'd like more contrast for reading.",
       },
       people: {
-        text: "Every entry credits whoever did the work, by first name and last initial. David A's call for help is what first reached us; Kenney, the foundation's founder, carried it.",
+        text: "Every entry credits whoever did the work, by first name and last initial; the foundation's founder is credited as Isaiah (Kenney). It began with David A's call for help, which was a call for love: he shared himself with a brother, Kenney, and Spirit turned it into a way forward that blesses others. A giving and receiving that started as a mustard seed, and is growing into a large tree.",
         fine: "Pictures come from public GitHub profiles. Anyone without one linked gets their initials inside a ring of the twin vine.",
       },
     },
@@ -403,6 +448,7 @@
         { t: "iamoneself.com", k: "Kenney's site", i: "globe", h: SITE, pin: true, x: "i am one self course begin" },
         { t: "retreats.iamoneself.com", k: "Kenney's site", i: "butterfly", h: "https://retreats.iamoneself.com", x: "retreats peru tarapoto ceremony" },
         { t: "About the Speaker", k: "iamoneself.com", i: "chat-circle-text", h: SPEAKER, x: "kenney contact reach out coaching whatsapp" },
+        { t: "Message Kenney on WhatsApp", k: "Reach out", i: "whatsapp-logo", h: WHATSAPP, x: "kenney contact reach phone call text telegram" },
         { t: "Map: every place, with pictures", k: "page", i: "map-trifold", h: ROOT + "/map/", pin: true, x: "sitemap where everything links overview thumbnails" },
         { t: "Donate", k: "page", i: "heart", h: ROOT + "/donate/", x: "give gift support money contribution ledger thanks crypto david" },
         { t: "Roadmap", k: "page", i: "path", h: LOG + "/roadmap", x: "plans next future ideas direction" },

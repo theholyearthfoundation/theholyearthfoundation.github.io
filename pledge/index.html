@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" data-arrival-site="portal">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A pledge of support — The Holy Earth Foundation on GitHub</title>
+<meta name="description" content="Sign a short pledge of support for The Holy Earth Foundation with a crypto wallet: free, nothing sent and nothing recorded, with a tool to verify any pledge&#x27;s signature.">
+<meta name="theme-color" content="#0f2420">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.png">
+<!-- Link previews (WhatsApp, iMessage, Telegram…): every URL absolute, a real 1200×630 JPEG, built by
+     the AstroLog with the site's other page cards (og/page/pledge.jpg). No counts on the card. -->
+<link rel="canonical" href="https://theholyearthfoundation.github.io/pledge/">
+<meta property="og:site_name" content="The Holy Earth Foundation on GitHub">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://theholyearthfoundation.github.io/pledge/">
+<meta property="og:title" content="A pledge of support — The Holy Earth Foundation on GitHub">
+<meta property="og:description" content="Sign a short pledge of support for The Holy Earth Foundation with a crypto wallet: free, nothing sent and nothing recorded, with a tool to verify any pledge&#x27;s signature.">
+<meta property="og:image" content="https://theholyearthfoundation.github.io/changelog-astro-public/og/page/pledge.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A pledge of support for The Holy Earth Foundation, signed with a wallet, beside the twin vine. Nothing is recorded, and there are no counts.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A pledge of support — The Holy Earth Foundation on GitHub">
+<meta name="twitter:description" content="Sign a short pledge of support for The Holy Earth Foundation with a crypto wallet: free, nothing sent and nothing recorded, with a tool to verify any pledge&#x27;s signature.">
+<meta name="twitter:image" content="https://theholyearthfoundation.github.io/changelog-astro-public/og/page/pledge.jpg">
+<meta name="twitter:image:alt" content="A pledge of support for The Holy Earth Foundation, signed with a wallet, beside the twin vine. Nothing is recorded, and there are no counts.">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<!-- THEF's arrival kit (v1.4), shared with the AstroLog and served from /arrival/ on this site. It
+     applies the visitor's light, motion, contrast, text size and cursor choice before first paint,
+     and draws the navbar, footer and windows from org.js, so it loads here in <head>. thef.css is
+     the portal's own page chrome (header, footer, dock). The page body is the kit's <arrival-pledge>,
+     from org.js: pledge (from my-template's portal/pledge.example.html). -->
+<link rel="stylesheet" href="/arrival/arrival.css">
+<link rel="stylesheet" href="/arrival/org.css">
+<script src="/arrival/org.js"></script>
+<script src="/arrival/arrival.js"></script>
+<link rel="stylesheet" href="/thef.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <canvas id="starfield-canvas" aria-hidden="true"></canvas>
+
+  <!-- One row at every width: the brand, the kit's navbar (from org.js: it folds into "More", then a
+       Menu button below 1100px, rather than wrapping) and the kit's tools. -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="The Holy Earth Foundation on GitHub, home"><img src="/favicon.svg" alt="" width="30" height="30"><span class="brand-title arr-brand-text">THEF</span></a>
+      <arrival-nav current="pledge"></arrival-nav>
+      <arrival-controls></arrival-controls>
+    </div>
+  </header>
+
+  <main id="main" class="page page-narrow">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/"><i class="ph ph-house-simple" aria-hidden="true"></i>Portal</a><span aria-hidden="true">/</span><span aria-current="page">Pledge</span></nav>
+    <h1>A pledge of support</h1>
+    <p class="lede">Giving is receiving. If The Holy Earth Foundation's work matters to you, you can say so by signing a short pledge with a crypto wallet. It costs nothing, sends nothing anywhere, and for now nothing is recorded.</p>
+    <!-- The pledge, its three steps, the "Gratitude tokens (coming)" and "aren't bots" cards, and the
+         verify-a-signature tool (#verify-signature), all from org.js: pledge. arrival.js draws it;
+         pledge/pledge.js runs it, borrowing give/give.js's wallet layer (Reown AppKit). No counts, and
+         no wallet address is ever shown. -->
+    <arrival-pledge><noscript><p>Signing a pledge needs JavaScript and a crypto wallet. Everything else on these pages works without either.</p></noscript></arrival-pledge>
+  </main>
+
+  <!-- Every way around, in groups (drawn by the kit from org.js: footer.groups). -->
+  <div class="page-foot"><arrival-footer current="pledge"></arrival-footer></div>
+
+  <footer class="universal-footer">
+    <div class="footer-inner">
+      <span class="footer-brand">The Holy Earth Foundation</span>
+      <a href="https://theholyearthfoundation.github.io/changelog-astro-public/"><i class="ph ph-door-open" aria-hidden="true"></i> <span class="long">Astro </span>Porch</a>
+      <a href="https://theholyearthfoundation.github.io/changelog-astro-public/teachings"><i class="ph ph-flower-lotus" aria-hidden="true"></i> Teachings</a>
+      <a href="https://theholyearthfoundation.github.io/changelog-astro-public/changelog"><i class="ph ph-clock-counter-clockwise" aria-hidden="true"></i> Changelog</a>
+      <a href="https://theholyearthfoundation.github.io/changelog-astro-public/library"><i class="ph ph-books" aria-hidden="true"></i> Library</a>
+      <a href="https://theholyearthfoundation.github.io/changelog-astro-public/ledger"><i class="ph ph-scroll" aria-hidden="true"></i> Ledger</a>
+      <a href="https://theholyearthfoundation.github.io/map/"><i class="ph ph-map-trifold" aria-hidden="true"></i> Map</a>
+      <a href="https://theholyearthfoundation.github.io/#community" data-arrival-open="community"><i class="ph ph-users-three" aria-hidden="true"></i> Community</a>
+      <a href="https://www.iamoneself.com/about-the-speaker" data-arrival-open="contact"><i class="ph ph-envelope-simple" aria-hidden="true"></i> Reach out</a>
+      <a href="https://theholyearthfoundation.github.io/donate/"><i class="ph ph-heart" aria-hidden="true"></i> Donate</a>
+      <a href="#welcome" data-arrival-open="guide"><i class="ph ph-signpost" aria-hidden="true"></i> Welcome<span class="long"> guide</span></a>
+      <a href="http://www.itcfonts.com" target="_blank" rel="noopener" class="font-credit"><i class="ph ph-text-aa" aria-hidden="true"></i> Headings set in PapyrusStd, Chris Costello / ITC</a>
+    </div>
+  </footer>
+
+  <!-- Fireflies, and the twin vine behind the pointer: one copy, shared with the AstroLog. They follow
+       the kit's motion and cursor-effects choices. -->
+  <script src="/starfield.js"></script>
+</body>
+</html>
