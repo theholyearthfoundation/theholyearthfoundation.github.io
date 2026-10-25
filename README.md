@@ -53,6 +53,7 @@ org's public repos (starting with this one) have a real home instead of an empty
 
 ## 🤝 Community health
 
+- [`ONBOARDING.md`](https://github.com/theholyearthfoundation/.github/blob/main/ONBOARDING.md): **joined the organization? start here**: two-factor login, connecting your AI helper, and how we work
 - [`CONTRIBUTING.md`](https://github.com/theholyearthfoundation/.github/blob/main/CONTRIBUTING.md)
 - [`SECURITY.md`](https://github.com/theholyearthfoundation/.github/blob/main/SECURITY.md)
 - [`SOCIAL-PREVIEWS.md`](https://github.com/theholyearthfoundation/.github/blob/main/SOCIAL-PREVIEWS.md): how to refresh link previews in Telegram, LinkedIn, Facebook and more, and which pages have their own share image
