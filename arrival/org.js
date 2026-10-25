@@ -23,9 +23,9 @@
   var PHONE = "tel:+18569792316";
   var PHONE_SHOWN = "+1 856-979-2316";
   var TELEGRAM = "https://t.me/iamoneself";
-  // David's site (a public preview on drasticstatic.github.io). Its own Contact page sends visitors
+  // David's site, at his own address since 2026-10-25 (served by the foundation). Its Contact page sends visitors
   // to Kenney's About the Speaker page; its Support David page is the one giving path that exists.
-  var DAVID = "https://drasticstatic.github.io/david-amaringo-public-preview";
+  var DAVID = "https://david.iamoneself.com";
   // I Am One Self's channels, as iamoneself.com links them (quiet, but public).
   var YOUTUBE = "https://www.youtube.com/channel/UCwxGrMD_vgdFGZKVQCPazQw";
   var X = "https://x.com/TheOneSelfIAM";
