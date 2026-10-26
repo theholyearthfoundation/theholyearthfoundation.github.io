@@ -66,7 +66,7 @@
       motto: "I am one Self, united with my Creator.",
       about:
         "The Holy Earth Foundation is home to Plants &amp; Miracles, Kenney's teaching that brings A Course in Miracles together with plant medicine traditions, and to the sites built for its teachers: I Am One Self, with Kenney's retreats and spiritual coaching, and David Amaringo's site, for David A's Amazonian visionary art and Chaiconi Bari teaching.",
-      mark: { src: ROOT + "/favicon.svg" },
+      mark: { src: ROOT + "/apple-touch-icon.png" }, // the foundation's mark (Kenney's), as iamoneself.com serves it
       home: {
         label: "iamoneself.com",
         href: SITE,
