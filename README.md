@@ -4,6 +4,11 @@
 
 <div align="center">
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/banner-dark.svg">
+  <img alt="The Holy Earth Foundation. Plants &amp; Miracles: a forest before dawn breathing into the light, where a golden halo glows above the Vine of the Soul, a twin-stranded liana of sky and gold. I am one Self, united with my Creator." src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/banner-light.svg" width="100%">
+</picture>
+
 # 🌎 The Holy Earth Foundation
 
 *Founded by Isaiah (Kenney)*
