@@ -6,7 +6,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/banner-dark.svg">
-  <img alt="The Holy Earth Foundation. Plants &amp; Miracles: the foundation's golden heart within a breathing Golden Halo, in a forest before dawn, framed by the Vine of the Soul, a twin-stranded liana of sky and gold that grows around the edge and blossoms. I am one Self, united with my Creator." src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/banner-light.svg" width="100%">
+  <img alt="The Holy Earth Foundation. Plants &amp; Miracles: the foundation's golden heart within a breathing Golden Halo, its four rays pointing north, east, south and west, in a forest before dawn, framed by the Vine of the Soul, a twin-stranded liana of sky and gold that grows around the edge, blossoms, and carries light up from its root. I am one Self, united with my Creator." src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/banner-light.svg" width="100%">
 </picture>
 
 # 🌎 The Holy Earth Foundation
