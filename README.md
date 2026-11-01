@@ -9,9 +9,9 @@
   <img alt="The Holy Earth Foundation. Plants &amp; Miracles: the foundation's golden heart within a breathing Golden Halo, its four rays ending in compass points lettered N, E, S and W, in a forest before dawn, framed by the Vine of the Soul, a twin-stranded liana of sky and gold that grows around the edge and lives: it sways, blossoms, curls its tendrils and carries light up from its root. I am one Self, united with my Creator." src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/banner-light.svg" width="100%">
 </picture>
 
-# 🌎 The Holy Earth Foundation
+# The Holy Earth Foundation
 
-*Founded by Isaiah (Kenney)*
+*Its source: Jesus and the Holy Spirit · its founder and project lead: Isaiah (Kenney)*
 
 [![Home](https://img.shields.io/badge/🌐_Home-iamoneself.com-purple?style=flat)](https://www.iamoneself.com)
 [![Retreats](https://img.shields.io/badge/🌐_Retreat%20Portal-retreats.iamoneself.com-8A5A2B?style=flat)](https://retreats.iamoneself.com)
@@ -26,52 +26,81 @@
 
 ---
 
-🦅🦉🦋 The Holy Earth Foundation bridges **A Course in Miracles** (The Eagle) with **Plant Medicine
+<img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/bird.svg" width="18" height="18" alt=""> The Holy Earth Foundation bridges **A Course in Miracles** (The Eagle) with **Plant Medicine
 traditions** (The Condor) in a teaching called **Plants & Miracles** — where the two come together as
 one, symbolized by the Barn Owl's single-mindedness. Currently expressed through two projects:
 
-- 🦉 **[I Am One Self](https://www.iamoneself.com)** — Kenney's teaching, background, and the
+- <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/sprout.svg" width="16" height="16" alt=""> **[I Am One Self](https://www.iamoneself.com)** — Kenney's teaching, background, and the
   Plants & Miracles philosophy.
-- 🦋 **[I Am One Self Retreats](https://retreats.iamoneself.com)** — retreats and spiritual coaching,
+- <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/leaf.svg" width="16" height="16" alt=""> **[I Am One Self Retreats](https://retreats.iamoneself.com)** — retreats and spiritual coaching,
   teaching Plants & Miracles through an interactive site.
-- 🎨 **[David Amaringo](https://david.iamoneself.com/)** — a home for
+- <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/sparkles.svg" width="16" height="16" alt=""> **[David Amaringo](https://david.iamoneself.com/)** — a home for
   Maestro David Amaringo, an Ayahuasca visionary artist trained by his uncle Pablo Cesar Amaringo Shuña
   (founder of the USKO-AYAR Amazonian School of Painting), a co-founder of Chaiconi Bari, and lead
   retreat facilitator alongside Kenney.
 
-## About this page
+## <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/compass.svg" width="24" height="24" alt=""> About this page
 
 This organization's GitHub presence, and its formal incorporation, are both still coming together —
 this profile is an honest early draft, not a finished institutional page. It exists now mainly so the
-org's public repos (starting with this one) have a real home instead of an empty search result. 🌱
+org's public repos (starting with this one) have a real home instead of an empty search result.
 
-## 🔗 Explore
+## <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/link.svg" width="24" height="24" alt=""> Explore
 
-- [🏠 Org root page →](https://theholyearthfoundation.github.io)
-- [🕰️ Changelog →](https://theholyearthfoundation.github.io/changelog-astro-public/changelog) —
+- <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/globe.svg" width="16" height="16" alt=""> [Org root page →](https://theholyearthfoundation.github.io)
+- <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/history.svg" width="16" height="16" alt=""> [Changelog →](https://theholyearthfoundation.github.io/changelog-astro-public/changelog):
   a running, plain-language record of what's actually shipped.
-- [📚 Library →](https://theholyearthfoundation.github.io/changelog-astro-public/library) — deeper
+- <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/book-open.svg" width="16" height="16" alt=""> [Library →](https://theholyearthfoundation.github.io/changelog-astro-public/library): deeper
   technical write-ups behind it.
-- [🦉 I Am One Self.com →](https://www.iamoneself.com)
-- [🦋 I Am One Self Retreats →](https://retreats.iamoneself.com): live, published to
+- <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/sprout.svg" width="16" height="16" alt=""> [I Am One Self.com →](https://www.iamoneself.com)
+- <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/leaf.svg" width="16" height="16" alt=""> [I Am One Self Retreats →](https://retreats.iamoneself.com): live, published to
   [`iamoneself-retreats-public`](https://github.com/theholyearthfoundation/iamoneself-retreats-public).
-- [🎨 David Amaringo →](https://david.iamoneself.com): live, published to
+- <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/sparkles.svg" width="16" height="16" alt=""> [David Amaringo →](https://david.iamoneself.com): live, published to
   [`david-amaringo-public`](https://github.com/theholyearthfoundation/david-amaringo-public).
-- 🕰️ **The first lab versions, kept as they were** (each one's note steps forward to today):
+- <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/history.svg" width="16" height="16" alt=""> **The first lab versions, kept as they were** (each one's note steps forward to today):
   [I Am One Self](https://drasticstatic.github.io/iamoneself-public-preview/) · [David Amaringo](https://drasticstatic.github.io/david-amaringo-public-preview/).
 
-## 🤝 Community health
+## <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/door-open.svg" width="24" height="24" alt=""> New here? Start with the welcome
+
+<a href="https://github.com/theholyearthfoundation/.github/blob/main/decks/welcome.marp.pdf"><img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/presentation.svg" width="16" height="16" alt=""> <b>Welcome to The Holy Earth Foundation</b></a>: seven stops for a newcomer and the AI helper beside them
+(your first hour, five words, proposals, procedures, the reading room, how a change travels, how to answer).
+Also as [slides](https://github.com/theholyearthfoundation/.github/blob/main/decks/welcome.marp.html) and
+[markdown](https://github.com/theholyearthfoundation/.github/blob/main/decks/welcome.marp.md); every deck anyone may
+read is on the [decks shelf](https://github.com/theholyearthfoundation/.github/tree/main/decks).
+
+```mermaid
+flowchart LR
+  Y["you"] --> W["the welcome deck<br/>(public)"]
+  W --> C["SOP-COM-001<br/>your first hour"]
+  C --> R["the reading room<br/>(members, signed in)"]
+  W --> P["the public room<br/>(anyone)"]
+  R --> A["your answer:<br/>an issue, a note, a call"]
+```
+
+## <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/book-open.svg" width="24" height="24" alt=""> Proposals, procedures and decks
+
+| | Where | What you find |
+|---|---|---|
+| <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/lock.svg" width="16" height="16" alt=""> | [**The reading room**](https://github.com/theholyearthfoundation/reading-room) (members, signed in) | the proposals, procedures and decks the foundation's people read before they are public, each as a page and a PDF. A 404 means "not yet invited" or "signed out", not "broken" |
+| <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/globe.svg" width="16" height="16" alt=""> | [**The public room**](https://theholyearthfoundation.github.io/reading-room-public/) (anyone) | what an officer has opened to visitors; its front page links back to the members' room |
+| <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/list-checks.svg" width="16" height="16" alt=""> | [**Procedures**](https://github.com/theholyearthfoundation/ops-standard-operating-procedures-public) (public twin) | *this is how we do it now*: the procedures every organisation shares, step by step, each with a PDF (filled by its sync; members read the full set in the reading room) |
+| <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/user-plus.svg" width="16" height="16" alt=""> | **SOP-COM-001**, *New to GitHub: your first hour* | your own account and password, two-factor, the invitation, five words, the reading room, a helper: [in the reading room](https://github.com/theholyearthfoundation/reading-room/blob/main/procedures/COM/SOP-COM-001-new-to-github-your-first-hour.md) |
+| <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/presentation.svg" width="16" height="16" alt=""> | [**Decks**](https://github.com/theholyearthfoundation/.github/tree/main/decks) | the welcome deck; Kenney's *Home base* lives in the members' room |
+| <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/scroll-text.svg" width="16" height="16" alt=""> | [`proposals`](https://github.com/theholyearthfoundation/proposals) and [`ops-standard-operating-procedures`](https://github.com/theholyearthfoundation/ops-standard-operating-procedures) (members) | where proposals ask and procedures are written |
+| <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/tags.svg" width="16" height="16" alt=""> | [**Gitmoji**](https://github.com/drasticstatic/my-template/blob/main/GITMOJI.md) | every commit subject starts with one gitmoji and a type: `:memo: docs(sop): …` |
+
+## <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/handshake.svg" width="24" height="24" alt=""> Community health
 
 - [`ONBOARDING.md`](https://github.com/theholyearthfoundation/.github/blob/main/ONBOARDING.md): **joined the organization? start here**: two-factor login, connecting your AI helper, and how we work
-- [`CONTRIBUTING.md`](https://github.com/theholyearthfoundation/.github/blob/main/CONTRIBUTING.md)
+- [`CONTRIBUTING.md`](https://github.com/theholyearthfoundation/.github/blob/main/CONTRIBUTING.md): how to contribute, and the [Gitmoji](https://github.com/drasticstatic/my-template/blob/main/GITMOJI.md) every commit subject starts with
 - [`SECURITY.md`](https://github.com/theholyearthfoundation/.github/blob/main/SECURITY.md)
 - [`SOCIAL-PREVIEWS.md`](https://github.com/theholyearthfoundation/.github/blob/main/SOCIAL-PREVIEWS.md): how to refresh link previews in Telegram, LinkedIn, Facebook and more, and which pages have their own share image
 
 
-## 📄 License
-- 💻 **Code:** MIT, see [`LICENSE`](https://github.com/theholyearthfoundation/.github/blob/main/LICENSE)
-- 📝 **Written content** (docs, changelog and library prose, READMEs): CC BY-SA 4.0, see [`LICENSE-CONTENT`](https://github.com/theholyearthfoundation/.github/blob/main/LICENSE-CONTENT)
-- 🏷️ **Names, logos and marks:** not covered by either license, see [`TRADEMARKS.md`](https://github.com/theholyearthfoundation/.github/blob/main/TRADEMARKS.md)
+## <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/file-text.svg" width="24" height="24" alt=""> License
+- <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/file-text.svg" width="16" height="16" alt=""> **Code:** MIT, see [`LICENSE`](https://github.com/theholyearthfoundation/.github/blob/main/LICENSE)
+- <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/scroll-text.svg" width="16" height="16" alt=""> **Written content** (docs, changelog and library prose, READMEs): CC BY-SA 4.0, see [`LICENSE-CONTENT`](https://github.com/theholyearthfoundation/.github/blob/main/LICENSE-CONTENT)
+- <img src="https://raw.githubusercontent.com/theholyearthfoundation/.github/main/profile/assets/icons/tags.svg" width="16" height="16" alt=""> **Names, logos and marks:** not covered by either license, see [`TRADEMARKS.md`](https://github.com/theholyearthfoundation/.github/blob/main/TRADEMARKS.md)
 
 ---
 
