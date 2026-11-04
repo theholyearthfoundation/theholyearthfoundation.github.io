@@ -14,6 +14,7 @@
   var ROOT = "https://theholyearthfoundation.github.io";
   var LOG = ROOT + "/changelog-astro-public";
   var TEACH = LOG + "/teachings";
+  var READING = ROOT + "/reading-room-public/";
   var SITE = "https://www.iamoneself.com";
   var SPEAKER = SITE + "/about-the-speaker";
   var RETREATS = "https://retreats.iamoneself.com";
@@ -140,6 +141,9 @@
         { id: "library", label: "Library", icon: "books", href: LOG + "/library", priority: 2, note: "How the sites are built, and why" },
         { id: "ledger", label: "Ledger", icon: "scroll", href: LOG + "/ledger", priority: 2, note: "Every public change, in plain words" },
         { id: "map", label: "Map", icon: "map-trifold", href: LOG + "/map", hrefs: { portal: ROOT + "/map/" }, priority: 2, note: "Every place, with a picture of each" },
+        // The reading room's public lane: proposals, procedures (SOPs) and decks the foundation has
+        // opened to visitors. It links on to the procedures' public twin and the decks in .github.
+        { id: "reading", label: "Proposals, procedures & decks", icon: "book-open-text", href: READING, priority: 1, note: "The reading room: what the foundation is ready to show" },
         {
           id: "involved",
           label: "Get involved",
@@ -179,7 +183,7 @@
     footer: {
       label: "The Holy Earth Foundation, all the ways around",
       groups: [
-        { label: "Explore", icon: "compass", items: ["portal", "porch", "teachings", "changelog", "library", "ledger", "map"] },
+        { label: "Explore", icon: "compass", items: ["portal", "porch", "teachings", "changelog", "library", "ledger", "map", "reading"] },
         { label: "Get involved", icon: "hand-heart", items: ["community", "contact", "donate", "pledge", { id: "guide", label: "Welcome guide", icon: "signpost", href: "#welcome", open: "guide" }] },
         { label: "The sites", icon: "globe-hemisphere-west", items: ["home", "retreats", "david"] },
         { label: "About this build", icon: "wrench", items: ["roadmap", "sustainability", "github", { id: "source", label: "AstroLog source", icon: "code", href: "https://github.com/theholyearthfoundation/changelog-astro-public" }] },
@@ -508,6 +512,8 @@
         "Every public change, in plain words": "Cada cambio público, en palabras sencillas",
         "Map": "Mapa",
         "Every place, with a picture of each": "Cada lugar, con una imagen de cada uno",
+        "Proposals, procedures & decks": "Propuestas, procedimientos y presentaciones",
+        "The reading room: what the foundation is ready to show": "La sala de lectura: lo que la fundación está lista para mostrar",
         "Get involved": "Participa",
         "Community": "Comunidad",
         "Coming soon, and a sneak peek": "Muy pronto, y un adelanto",
